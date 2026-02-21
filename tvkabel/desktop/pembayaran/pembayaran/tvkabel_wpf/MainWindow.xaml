@@ -1,0 +1,1131 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:System="clr-namespace:System;assembly=mscorlib" mc:Ignorable="d" x:Class="tvkabel_wpf.MainWindow"
+        xmlns:crystal="clr-namespace:CrystalDecisions.Windows.Forms;assembly=CrystalDecisions.Windows.Forms"
+        Title="APLIKASI TV KABEL" Height="750" Width="1057" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" WindowStyle="ToolWindow">
+
+    <Window.Resources>
+        <!-- Animation for container Pembayaran-->
+        <Storyboard x:Key="containerPembayaranFlyingIn">
+            <ThicknessAnimationUsingKeyFrames
+				Storyboard.TargetProperty="(FrameworkElement.Margin)"
+				Storyboard.TargetName="containerPembayaran">
+                <EasingThicknessKeyFrame KeyTime="0:0:0.1" Value="0,460,0,0"/>
+                <EasingThicknessKeyFrame KeyTime="0:0:0.5" Value="0,260,0,0"/>
+                <EasingThicknessKeyFrame KeyTime="0:0:1" Value="0,159,0,0"/>
+            </ThicknessAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames
+				Storyboard.TargetName="containerPembayaran"
+	            Storyboard.TargetProperty="Opacity">
+                <SplineDoubleKeyFrame KeyTime="00:00:0" Value="0.0"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:0.25" Value="0.25"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:0.5" Value="0.5"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:0.75" Value="0.75"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:1" Value="1.0"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="containerPembayaranFlyingOut">
+            <ThicknessAnimationUsingKeyFrames
+				Storyboard.TargetProperty="(FrameworkElement.Margin)"
+				Storyboard.TargetName="containerPembayaran">
+                <EasingThicknessKeyFrame KeyTime="0:0:0.5" Value="0,260,0,0"/>
+                <EasingThicknessKeyFrame KeyTime="0:0:1" Value="0,460,0,0"/>
+            </ThicknessAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames
+			    Storyboard.TargetName="containerPembayaran"
+				Storyboard.TargetProperty="Opacity">
+                <SplineDoubleKeyFrame KeyTime="00:00:0.25" Value="1.0"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:0.5" Value="0.75"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:0.75" Value="0.5"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:1" Value="0.0"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+
+        <!-- Animation for container Laporan-->
+        <Storyboard x:Key="containerLaporanFlyingIn">
+            <ThicknessAnimationUsingKeyFrames
+				Storyboard.TargetProperty="(FrameworkElement.Margin)"
+				Storyboard.TargetName="containerLaporan">
+                <EasingThicknessKeyFrame KeyTime="0:0:0.1" Value="0,460,0,0"/>
+                <EasingThicknessKeyFrame KeyTime="0:0:0.5" Value="0,260,0,0"/>
+                <EasingThicknessKeyFrame KeyTime="0:0:1" Value="0,159,0,0"/>
+            </ThicknessAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames
+				Storyboard.TargetName="containerLaporan"
+	            Storyboard.TargetProperty="Opacity">
+                <SplineDoubleKeyFrame KeyTime="00:00:0" Value="0.0"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:0.25" Value="0.25"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:0.5" Value="0.5"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:0.75" Value="0.75"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:1" Value="1.0"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="containerLaporanFlyingOut">
+            <ThicknessAnimationUsingKeyFrames
+				Storyboard.TargetProperty="(FrameworkElement.Margin)"
+				Storyboard.TargetName="containerLaporan">
+                <EasingThicknessKeyFrame KeyTime="0:0:0.5" Value="0,260,0,0"/>
+                <EasingThicknessKeyFrame KeyTime="0:0:1" Value="0,460,0,0"/>
+            </ThicknessAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames
+			    Storyboard.TargetName="containerLaporan"
+				Storyboard.TargetProperty="Opacity">
+                <SplineDoubleKeyFrame KeyTime="00:00:0.25" Value="1.0"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:0.5" Value="0.75"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:0.75" Value="0.5"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:1" Value="0.0"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+
+        <!-- Animation for container Database-->
+        <Storyboard x:Key="containerDatabaseFlyingIn">
+            <ThicknessAnimationUsingKeyFrames
+				Storyboard.TargetProperty="(FrameworkElement.Margin)"
+				Storyboard.TargetName="containerDatabase">
+                <EasingThicknessKeyFrame KeyTime="0:0:0.1" Value="0,460,0,0"/>
+                <EasingThicknessKeyFrame KeyTime="0:0:0.5" Value="0,260,0,0"/>
+                <EasingThicknessKeyFrame KeyTime="0:0:1" Value="0,159,0,0"/>
+            </ThicknessAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames
+				Storyboard.TargetName="containerDatabase"
+	            Storyboard.TargetProperty="Opacity">
+                <SplineDoubleKeyFrame KeyTime="00:00:0" Value="0.0"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:0.25" Value="0.25"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:0.5" Value="0.5"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:0.75" Value="0.75"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:1" Value="1.0"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="containerDatabaseFlyingOut">
+            <ThicknessAnimationUsingKeyFrames
+				Storyboard.TargetProperty="(FrameworkElement.Margin)"
+				Storyboard.TargetName="containerDatabase">
+                <EasingThicknessKeyFrame KeyTime="0:0:0.5" Value="0,260,0,0"/>
+                <EasingThicknessKeyFrame KeyTime="0:0:1" Value="0,460,0,0"/>
+            </ThicknessAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames
+			    Storyboard.TargetName="containerDatabase"
+				Storyboard.TargetProperty="Opacity">
+                <SplineDoubleKeyFrame KeyTime="00:00:0.25" Value="1.0"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:0.5" Value="0.75"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:0.75" Value="0.5"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:1" Value="0.0"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+
+        <!-- Animation for container Pelanggan-->
+        <Storyboard x:Key="containerPelangganFlyingIn">
+            <ThicknessAnimationUsingKeyFrames
+				Storyboard.TargetProperty="(FrameworkElement.Margin)"
+				Storyboard.TargetName="containerPelanggan">
+                <EasingThicknessKeyFrame KeyTime="0:0:0.1" Value="0,460,0,0"/>
+                <EasingThicknessKeyFrame KeyTime="0:0:0.5" Value="0,260,0,0"/>
+                <EasingThicknessKeyFrame KeyTime="0:0:1" Value="0,159,0,0"/>
+            </ThicknessAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames
+				Storyboard.TargetName="containerPelanggan"
+	            Storyboard.TargetProperty="Opacity">
+                <SplineDoubleKeyFrame KeyTime="00:00:0" Value="0.0"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:0.25" Value="0.25"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:0.5" Value="0.5"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:0.75" Value="0.75"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:1" Value="1.0"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="containerPelangganFlyingOut">
+            <ThicknessAnimationUsingKeyFrames
+				Storyboard.TargetProperty="(FrameworkElement.Margin)"
+				Storyboard.TargetName="containerPelanggan">
+                <EasingThicknessKeyFrame KeyTime="0:0:0.5" Value="0,260,0,0"/>
+                <EasingThicknessKeyFrame KeyTime="0:0:1" Value="0,460,0,0"/>
+            </ThicknessAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames
+			    Storyboard.TargetName="containerPelanggan"
+				Storyboard.TargetProperty="Opacity">
+                <SplineDoubleKeyFrame KeyTime="00:00:0.25" Value="1.0"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:0.5" Value="0.75"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:0.75" Value="0.5"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:1" Value="0.0"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+
+        <!-- Animation for container Tipe Kontak-->
+        <Storyboard x:Key="containerTipeKontakFlyingIn">
+            <ThicknessAnimationUsingKeyFrames
+				Storyboard.TargetProperty="(FrameworkElement.Margin)"
+				Storyboard.TargetName="containerTipeKontak">
+                <EasingThicknessKeyFrame KeyTime="0:0:0.1" Value="0,460,0,0"/>
+                <EasingThicknessKeyFrame KeyTime="0:0:0.5" Value="0,260,0,0"/>
+                <EasingThicknessKeyFrame KeyTime="0:0:1" Value="0,159,0,0"/>
+            </ThicknessAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames
+				Storyboard.TargetName="containerTipeKontak"
+	            Storyboard.TargetProperty="Opacity">
+                <SplineDoubleKeyFrame KeyTime="00:00:0" Value="0.0"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:0.25" Value="0.25"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:0.5" Value="0.5"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:0.75" Value="0.75"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:1" Value="1.0"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="containerTipeKontakFlyingOut">
+            <ThicknessAnimationUsingKeyFrames
+				Storyboard.TargetProperty="(FrameworkElement.Margin)"
+				Storyboard.TargetName="containerTipeKontak">
+                <EasingThicknessKeyFrame KeyTime="0:0:0.5" Value="0,260,0,0"/>
+                <EasingThicknessKeyFrame KeyTime="0:0:1" Value="0,460,0,0"/>
+            </ThicknessAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames
+			    Storyboard.TargetName="containerTipeKontak"
+				Storyboard.TargetProperty="Opacity">
+                <SplineDoubleKeyFrame KeyTime="00:00:0.25" Value="1.0"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:0.5" Value="0.75"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:0.75" Value="0.5"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:1" Value="0.0"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+
+        <!-- Animation for container Tipe Tv-->
+        <Storyboard x:Key="containerTipeTvFlyingIn"/>
+        <Storyboard x:Key="containerTipeTvFlyingOut"/>
+
+        <!-- Animation for container Tipe Status -->
+        <Storyboard x:Key="containerTipeStatusFlyingIn"/>
+        <Storyboard x:Key="containerTipeStatusFlyingOut"/>
+
+        <!-- Animation for container Tipe Iuran -->
+        <Storyboard x:Key="containerTipeIuranFlyingIn"/>
+        <Storyboard x:Key="containerTipeIuranFlyingOut"/>
+
+        <!-- Animation for container Login -->
+        <Storyboard x:Key="containerLoginFlyingIn">
+            <ThicknessAnimationUsingKeyFrames
+				Storyboard.TargetProperty="(FrameworkElement.Margin)"
+				Storyboard.TargetName="containerLogin">
+                <EasingThicknessKeyFrame KeyTime="0:0:0.1" Value="0,460,0,0"/>
+                <EasingThicknessKeyFrame KeyTime="0:0:0.5" Value="0,260,0,0"/>
+                <EasingThicknessKeyFrame KeyTime="0:0:1" Value="0,159,0,0"/>
+            </ThicknessAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames
+				Storyboard.TargetName="containerLogin"
+	            Storyboard.TargetProperty="Opacity">
+                <SplineDoubleKeyFrame KeyTime="00:00:0" Value="0.0"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:0.25" Value="0.25"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:0.5" Value="0.5"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:0.75" Value="0.75"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:1" Value="1.0"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="containerLoginFlyingOut">
+            <ThicknessAnimationUsingKeyFrames
+				Storyboard.TargetProperty="(FrameworkElement.Margin)"
+				Storyboard.TargetName="containerLogin">
+                <EasingThicknessKeyFrame KeyTime="0:0:0.5" Value="0,260,0,0"/>
+                <EasingThicknessKeyFrame KeyTime="0:0:1" Value="0,460,0,0"/>
+            </ThicknessAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames
+			    Storyboard.TargetName="containerLogin"
+				Storyboard.TargetProperty="Opacity">
+                <SplineDoubleKeyFrame KeyTime="00:00:0.25" Value="1.0"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:0.5" Value="0.75"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:0.75" Value="0.5"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:1" Value="0.0"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+    </Window.Resources>
+
+    <!-- Element -->
+    <Grid>
+
+        <Grid x:Name="containerHeader" Margin="0" Height="159" Width="1051" VerticalAlignment="Top" HorizontalAlignment="Left">
+            <Rectangle x:Name="BackRectHeader" Fill="#FF2DD4D0" Stroke="Black" d:IsLocked="True"/>
+            <Rectangle x:Name="FrontRectHeader" Stroke="Black" d:IsLocked="True">
+                <Rectangle.Fill>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="White" Offset="0"/>
+                        <GradientStop Offset="1"/>
+                        <GradientStop Color="#C8A9A5A5" Offset="0.031"/>
+                        <GradientStop Color="#8F605F5F" Offset="0.597"/>
+                        <GradientStop Color="#49454545" Offset="0.938"/>
+                        <GradientStop Color="#B06A6767" Offset="0.31"/>
+                    </LinearGradientBrush>
+                </Rectangle.Fill>
+            </Rectangle>
+            <TextBlock Height="63.75" Margin="8,8,451,0" TextWrapping="Wrap" Text="T V K   G L O B A L  V I S I O N" VerticalAlignment="Top" FontSize="32" FontWeight="Bold" FontFamily="Showcard Gothic" Foreground="White">
+                <TextBlock.Effect>
+                    <DropShadowEffect/>
+                </TextBlock.Effect>
+            </TextBlock>
+            <Path Data="M0.5,78.987328 L1039,79.33333" Margin="0.5,79,-1,78.654" Stretch="Fill" Stroke="Black">
+                <Path.Fill>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="White" Offset="0"/>
+                        <GradientStop Offset="1"/>
+                        <GradientStop Color="#C8A9A5A5" Offset="0.031"/>
+                        <GradientStop Color="#8F605F5F" Offset="0.597"/>
+                        <GradientStop Color="#49454545" Offset="0.938"/>
+                        <GradientStop Color="#FF6A6A6A" Offset="0.31"/>
+                    </LinearGradientBrush>
+                </Path.Fill>
+            </Path>
+            <Path Data="M718.83387,78.802591 L717.99318,0.54183959" HorizontalAlignment="Right" Height="79.641" Margin="0,0.526,319.167,0" Stretch="Fill" Stroke="Black" VerticalAlignment="Top" Width="1.84">
+                <Path.Fill>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="White" Offset="0"/>
+                        <GradientStop Offset="1"/>
+                        <GradientStop Color="#C8A9A5A5" Offset="0.031"/>
+                        <GradientStop Color="#8F605F5F" Offset="0.597"/>
+                        <GradientStop Color="#49454545" Offset="0.938"/>
+                        <GradientStop Color="#B06A6767" Offset="0.31"/>
+                    </LinearGradientBrush>
+                </Path.Fill>
+            </Path>
+            <Path Data="M798.49966,54.953634 L798.76667,1.4603022" HorizontalAlignment="Right" Margin="0,0.5,239.233,78.833" Stretch="Fill" Stroke="Black" Width="1.267">
+                <Path.Fill>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="White" Offset="0"/>
+                        <GradientStop Offset="1"/>
+                        <GradientStop Color="#C8A9A5A5" Offset="0.031"/>
+                        <GradientStop Color="#8F605F5F" Offset="0.597"/>
+                        <GradientStop Color="#49454545" Offset="0.938"/>
+                        <GradientStop Color="#B06A6767" Offset="0.31"/>
+                    </LinearGradientBrush>
+                </Path.Fill>
+            </Path>
+            <Path Data="M878.66647,54.45911 L878.59679,1.4610162" HorizontalAlignment="Right" Margin="0,0.48,159.333,78.833" Stretch="Fill" Stroke="Black" Width="1.07">
+                <Path.Fill>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="White" Offset="0"/>
+                        <GradientStop Offset="1"/>
+                        <GradientStop Color="#C8A9A5A5" Offset="0.031"/>
+                        <GradientStop Color="#8F605F5F" Offset="0.597"/>
+                        <GradientStop Color="#49454545" Offset="0.938"/>
+                        <GradientStop Color="#B06A6767" Offset="0.31"/>
+                    </LinearGradientBrush>
+                </Path.Fill>
+            </Path>
+            <Path Data="M958.66826,55.434404 L958.72656,1.1405144" HorizontalAlignment="Right" Margin="0,0.306,79.275,78.667" Stretch="Fill" Stroke="Black" Width="1.058">
+                <Path.Fill>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="White" Offset="0"/>
+                        <GradientStop Offset="1"/>
+                        <GradientStop Color="#C8A9A5A5" Offset="0.031"/>
+                        <GradientStop Color="#8F605F5F" Offset="0.597"/>
+                        <GradientStop Color="#49454545" Offset="0.938"/>
+                        <GradientStop Color="#B06A6767" Offset="0.31"/>
+                    </LinearGradientBrush>
+                </Path.Fill>
+            </Path>
+            <Button x:Name="btnAdmin" HorizontalAlignment="Right" Margin="0,4.75,245.667,0" Style="{DynamicResource ImageButton}" Width="69.5" Height="53" VerticalAlignment="Top" ToolTip="ADMIN" Click="btnAdmin_Click">
+                <Button.Effect>
+                    <DropShadowEffect/>
+                </Button.Effect>
+                <Button.Triggers>
+                    <EventTrigger RoutedEvent="ButtonBase.Click">
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <DoubleAnimation 
+					                Storyboard.TargetName="containerAdmin"
+                					Storyboard.TargetProperty="Opacity" 
+                					From="0.0" To="1.0" Duration="0:0:2"/>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger>
+                </Button.Triggers>
+                <ContentControl Height="45" Width="61.5">
+                    <Image Source="/tvkabel_wpf;component/Resources/administrator-icon.png" Margin="0,0,0,0" />
+                </ContentControl>
+            </Button>
+            <Button x:Name="btnTransaksi" HorizontalAlignment="Right" Margin="0,4.75,165.733,0" Style="{DynamicResource ImageButton}" Width="69.5" Height="53" VerticalAlignment="Top" ToolTip="TRANSAKSI" Click="btnTransaksi_Click">
+                <Button.Effect>
+                    <DropShadowEffect/>
+                </Button.Effect>
+                <Button.Triggers>
+                    <EventTrigger RoutedEvent="ButtonBase.Click">
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <DoubleAnimation 
+					                Storyboard.TargetName="containerTransaksi"
+                					Storyboard.TargetProperty="Opacity" 
+                					From="0.0" To="1.0" Duration="0:0:2"/>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger>
+                </Button.Triggers>
+                <ContentControl Height="45" Width="47.333">
+                    <Image Source="/tvkabel_wpf;component/Resources/transaction-icon.png" />
+                </ContentControl>
+            </Button>
+            <Button x:Name="btnPengaturan" HorizontalAlignment="Right" Margin="0,4.75,85.833,0" Style="{DynamicResource ImageButton}" Width="69.5" Height="53" VerticalAlignment="Top" ToolTip="PENGATURAN" Click="btnPengaturan_Click">
+                <Button.Effect>
+                    <DropShadowEffect/>
+                </Button.Effect>
+                <Button.Triggers>
+                    <EventTrigger RoutedEvent="ButtonBase.Click">
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <DoubleAnimation 
+					                Storyboard.TargetName="containerPengaturan"
+                					Storyboard.TargetProperty="Opacity" 
+                					From="0.0" To="1.0" Duration="0:0:2"/>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger>
+                </Button.Triggers>
+                <ContentControl Height="40.5" Width="61.5">
+                    <Image Source="/tvkabel_wpf;component/Resources/settings-icon.png" />
+                </ContentControl>
+            </Button>
+            <Button x:Name="btnKeluar" HorizontalAlignment="Right" Margin="0,4.75,5.775,0" Style="{DynamicResource ImageButton}" Width="69.5" Height="53" VerticalAlignment="Top" ToolTip="KELUAR" Click="btnKeluar_Click">
+                <Button.Effect>
+                    <DropShadowEffect/>
+                </Button.Effect>
+                <ContentControl Height="39.5" Width="54.5">
+                    <Image Source="/tvkabel_wpf;component/Resources/exit-icon.png" />
+                </ContentControl>
+            </Button>
+            <TextBlock x:Name="lbadmin" HorizontalAlignment="Right" Height="17.25" Margin="0,61.75,245.667,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="69.5" FontSize="10.667" TextAlignment="Center" Foreground="White">
+                <TextBlock.Effect>
+                    <DropShadowEffect/>
+                </TextBlock.Effect><Run FontWeight="Bold" FontSize="9.333" Text="ADMIN"/></TextBlock>
+            <TextBlock HorizontalAlignment="Right" Height="17.25" Margin="0,61.75,165.733,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="69.5" FontSize="10.667" TextAlignment="Center" Foreground="White">
+                <TextBlock.Effect>
+                    <DropShadowEffect/>
+                </TextBlock.Effect><Run FontWeight="Bold" FontSize="9.333" Text="TRANSAKSI"/></TextBlock>
+            <TextBlock HorizontalAlignment="Right" Height="17.25" Margin="0,61.75,85.833,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="69.5" FontSize="10.667" TextAlignment="Center" Foreground="White">
+                <TextBlock.Effect>
+                    <DropShadowEffect/>
+                </TextBlock.Effect><Run FontWeight="Bold" FontSize="9.333" Text="PENGATURAN"/></TextBlock>
+            <TextBlock HorizontalAlignment="Right" Height="17.25" Margin="0,61.75,5.775,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="69.5" FontSize="10.667" TextAlignment="Center" Foreground="White">
+                <TextBlock.Effect>
+                    <DropShadowEffect/>
+                </TextBlock.Effect><Run FontWeight="Bold" FontSize="9.333" Text="KELUAR"/></TextBlock>
+            <Grid x:Name="containerAdmin" Margin="0,0,0,0" Height="76.667" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="478.25" Visibility="Visible">
+                <Rectangle x:Name="BackRectAdmin" Fill="#00000000" Margin="-0.003,-2.331,0.003,2.331"/>
+                <Rectangle x:Name="FrontRectAdmin" Margin="-2.253,-2.331,0.003,2.331" Width="1042" Fill="#00000000"/>
+                <Button x:Name="btnPelanggan" HorizontalAlignment="Left" Margin="6.5,3.42,0,22.747" Style="{DynamicResource ImageButton}" Width="60" ToolTip="DATA PELANGGAN" Click="btnPelanggan_Click">
+                    <Button.Effect>
+                        <DropShadowEffect/>
+                    </Button.Effect>
+                    <ContentControl Height="42.5" Width="52">
+                        <Image Source="/tvkabel_wpf;component/Resources/customer-icon.png"/>
+                    </ContentControl>
+                </Button>
+                <Button x:Name="btnKontak" HorizontalAlignment="Left" Margin="80,3.5,0,22.667" Style="{DynamicResource ImageButton}" Width="60" Height="50.5" ToolTip="TIPE KONTAK" Click="btnKontak_Click">
+                    <Button.Effect>
+                        <DropShadowEffect/>
+                    </Button.Effect>
+                    <ContentControl Height="42.5" Width="52">
+                        <Image Source="/Resources/contact-icon.png"/>
+                    </ContentControl>
+                </Button>
+                <Button x:Name="btnLogin" HorizontalAlignment="Left" Margin="160,4.5,0,26.167" Style="{DynamicResource ImageButton}" Width="60" ToolTip="LOGIN" Click="btnLogin_Click">
+                    <Button.Effect>
+                        <DropShadowEffect/>
+                    </Button.Effect>
+                    <ContentControl Width="39.75">
+                        <Image Source="/Resources/login-icon.png"/>
+                    </ContentControl>
+                </Button>
+                <TextBlock HorizontalAlignment="Left" Margin="6.5,0,0,2.331" TextWrapping="Wrap" Width="60" Height="16.416" VerticalAlignment="Bottom" TextAlignment="Center" Foreground="White">
+                    <TextBlock.Effect>
+                        <DropShadowEffect/>
+                    </TextBlock.Effect><Run FontWeight="Bold" FontSize="9.333" Text="PELANGGAN"/></TextBlock>
+                <TextBlock HorizontalAlignment="Left" Margin="80,0,0,2.331" TextWrapping="Wrap" Width="60" Height="16.416" VerticalAlignment="Bottom" TextAlignment="Center" Foreground="White">
+                    <TextBlock.Effect>
+                        <DropShadowEffect/>
+                    </TextBlock.Effect><Run FontWeight="Bold" FontSize="9.333" Text="KONTAK"/></TextBlock>
+                <TextBlock HorizontalAlignment="Left" Margin="160,0,0,2.331" TextWrapping="Wrap" Width="60" Height="16.416" VerticalAlignment="Bottom" TextAlignment="Center" Foreground="White">
+                    <TextBlock.Effect>
+                        <DropShadowEffect/>
+                    </TextBlock.Effect><Run FontWeight="Bold" FontSize="9.333" Text="LOGIN"/></TextBlock>
+            </Grid>
+            <Grid x:Name="containerTransaksi" Margin="0" Height="76.667" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="478.25" d:IsHidden="True">
+                <Rectangle x:Name="BackRectTransaksi" Fill="#00000000" Margin="-0.003,-2.331,0.003,2.331"/>
+                <Rectangle x:Name="FrontRectTransaksi" Margin="-2.253,-2.998,-561.497,2.998" Width="1042" Fill="#00000000"/>
+                <Button x:Name="btnPembayaran" HorizontalAlignment="Left" Margin="6.5,3.42,0,22.747" Style="{DynamicResource ImageButton}" Width="60" ToolTip="DATA PELANGGAN" Click="btnPembayaran_Click">
+                    <Button.Effect>
+                        <DropShadowEffect/>
+                    </Button.Effect>
+                    <ContentControl Height="42.5" Width="52">
+                        <Image Source="/Resources/pembayaran-icon.png"/>
+                    </ContentControl>
+                </Button>
+                <TextBlock HorizontalAlignment="Left" Margin="3.75,0,0,2.331" TextWrapping="Wrap" Width="65" Height="16.416" VerticalAlignment="Bottom" TextAlignment="Center" Foreground="White">
+                    <TextBlock.Effect>
+                        <DropShadowEffect/>
+                    </TextBlock.Effect><Run FontWeight="Bold" FontSize="9.333" Text="PEMBAYARAN"/></TextBlock>
+                <Button x:Name="btnLaporan" HorizontalAlignment="Left" Margin="78.417,3.5,0,22.667" Style="{DynamicResource ImageButton}" Width="60" ToolTip="TIPE TV" Click="btnLaporan_Click">
+                    <Button.Effect>
+                        <DropShadowEffect/>
+                    </Button.Effect>
+                    <ContentControl Height="42.5" Width="45.5">
+                        <Image Source="/Resources/reports-icon.png"/>
+                    </ContentControl>
+                </Button>
+                <TextBlock HorizontalAlignment="Left" Margin="78.417,0,0,2.331" TextWrapping="Wrap" Width="60" Height="16.416" VerticalAlignment="Bottom" TextAlignment="Center" Foreground="White">
+                    <TextBlock.Effect>
+                        <DropShadowEffect/>
+                    </TextBlock.Effect><Run FontWeight="Bold" FontSize="9.333" Text="LAPORAN"/></TextBlock>
+            </Grid>
+            <Grid x:Name="containerPengaturan" Margin="0" Height="76.667" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="478.25" Visibility="Visible" d:IsHidden="True">
+                <Rectangle x:Name="BackRectPengaturan" Fill="#00000000" Margin="-0.003,-2.331,0.003,2.331"/>
+                <Rectangle x:Name="FrontRectPengaturan" Margin="0,3.42,-563.75,-3.42" Width="1042" Fill="#00000000"/>
+                <Button x:Name="btnDatabase" HorizontalAlignment="Left" Margin="6.5,3.42,0,22.747" Style="{DynamicResource ImageButton}" Width="60" ToolTip="DATA PELANGGAN" Click="btnDatabase_Click">
+                    <Button.Effect>
+                        <DropShadowEffect/>
+                    </Button.Effect>
+                    <ContentControl Height="42.5" Width="52">
+                        <Image Source="/Resources/database-icon.png"/>
+                    </ContentControl>
+                </Button>
+                <TextBlock HorizontalAlignment="Left" Margin="3.75,0,0,2.331" TextWrapping="Wrap" Width="60" Height="16.416" VerticalAlignment="Bottom" TextAlignment="Center" Foreground="White">
+                    <TextBlock.Effect>
+                        <DropShadowEffect/>
+                    </TextBlock.Effect><Run FontWeight="Bold" FontSize="9.333" Text="DATABASE"/></TextBlock>
+            </Grid>
+        </Grid>
+
+        <Grid x:Name="containerLaporan" Margin="0,159,0,0" Width="1051" d:IsHidden="True">
+            <Rectangle x:Name="BackRectLaporan" Fill="White" Stroke="Black" d:IsLocked="True"/>
+            <Rectangle x:Name="FrontRectLaporan" Stroke="Black" Margin="-0.003,0,0.003,0" RenderTransformOrigin="0.5,0.503" d:IsLocked="True">
+                <Rectangle.Fill>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="White" Offset="0"/>
+                        <GradientStop Offset="1"/>
+                        <GradientStop Color="#C8A9A5A5" Offset="0.031"/>
+                        <GradientStop Color="#8F605F5F" Offset="0.597"/>
+                        <GradientStop Color="#49454545" Offset="0.938"/>
+                        <GradientStop Color="#B06A6767" Offset="0.31"/>
+                    </LinearGradientBrush>
+                </Rectangle.Fill>
+            </Rectangle>
+            <ComboBox x:Name="cbLaporan" HorizontalAlignment="Left" Height="25" Margin="160,20,0,0" VerticalAlignment="Top" Width="150" SelectionChanged="cbLaporan_SelectionChanged">
+                <ComboBox.Effect>
+                    <DropShadowEffect/>
+                </ComboBox.Effect>
+                <System:String>Bulanan</System:String>
+                <System:String>Tunggakan</System:String>
+                <System:String>Pelanggan</System:String>
+            </ComboBox>
+            <Label Content="Jenis Laporan" HorizontalAlignment="Left" Height="25" Margin="45,20,0,0" VerticalAlignment="Top" Width="100" Foreground="White" FontFamily="Tahoma" FontWeight="Bold">
+                <Label.Effect>
+                    <DropShadowEffect/>
+                </Label.Effect>
+            </Label>
+            <Button x:Name="btnLaporanOK" Content="OK" Height="25" Margin="900,20,0,0" Style="{DynamicResource GlassButton}" VerticalAlignment="Top" Foreground="White" FontFamily="Tahoma" FontWeight="Bold" HorizontalAlignment="Left" Width="71" Click="btnLaporanOK_Click">
+                <Button.Effect>
+                    <DropShadowEffect/>
+                </Button.Effect>
+            </Button>
+            <Grid x:Name="gridLaporanReport" Margin="40,80,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Width="974" Height="440.5">
+                <WindowsFormsHost>
+                    <crystal:CrystalReportViewer x:Name="laporanReportViewer" Width="900" Height="400"/>
+                </WindowsFormsHost>
+            </Grid>
+            <ComboBox x:Name="cbLaporanBulan" Height="25" Margin="510,20,0,0" VerticalAlignment="Top" Width="125" HorizontalAlignment="Left">
+                <ComboBox.Effect>
+                    <DropShadowEffect/>
+                </ComboBox.Effect>
+                <System:String>Januari</System:String>
+                <System:String>Februari</System:String>
+                <System:String>Maret</System:String>
+                <System:String>April</System:String>
+                <System:String>Mei</System:String>
+                <System:String>Juni</System:String>
+                <System:String>Juli</System:String>
+                <System:String>Agustus</System:String>
+                <System:String>September</System:String>
+                <System:String>Oktober</System:String>
+                <System:String>November</System:String>
+                <System:String>Desember</System:String>
+            </ComboBox>
+            <ComboBox x:Name="cbLaporanTahun" HorizontalAlignment="Left" Height="25" Margin="750,20,0,0" VerticalAlignment="Top" Width="90">
+                <ComboBox.Effect>
+                    <DropShadowEffect/>
+                </ComboBox.Effect>
+                <System:String>2012</System:String>
+                <System:String>2013</System:String>
+                <System:String>2014</System:String>
+                <System:String>2015</System:String>
+            </ComboBox>
+            <Label x:Name="lblBulan" Content="Bulan" HorizontalAlignment="Left" Height="25" Margin="420.498,20,0,0" VerticalAlignment="Top" Width="61" Foreground="White" FontFamily="Tahoma" FontWeight="Bold">
+                <Label.Effect>
+                    <DropShadowEffect/>
+                </Label.Effect>
+            </Label>
+            <Label x:Name="lblTahun" Content="Tahun" HorizontalAlignment="Right" Height="25" Margin="0,20,304.002,0" VerticalAlignment="Top" Width="73" Foreground="White" FontFamily="Tahoma" FontWeight="Bold">
+                <Label.Effect>
+                    <DropShadowEffect/>
+                </Label.Effect>
+            </Label>
+            <Label x:Name="lblStatus" Content="Status" HorizontalAlignment="Left" Height="25" Margin="420,20,0,0" VerticalAlignment="Top" Width="61" Foreground="White" FontFamily="Tahoma" FontWeight="Bold" Visibility="Hidden">
+                <Label.Effect>
+                    <DropShadowEffect/>
+                </Label.Effect>
+            </Label>
+            <ComboBox x:Name="cbStatusPelanggan" Height="25" Margin="510,20,0,0" VerticalAlignment="Top" Width="125" HorizontalAlignment="Left" Visibility="Hidden">
+                <ComboBox.Effect>
+                    <DropShadowEffect/>
+                </ComboBox.Effect>
+                <System:String>Aktif</System:String>
+                <System:String>Non-Aktif</System:String>
+            </ComboBox>
+        </Grid>
+
+        <Grid x:Name="containerDatabase" Margin="0,159,0,0" Width="1051" Visibility="Hidden" d:IsHidden="True">
+            <Rectangle x:Name="BackRectDatabase" Fill="White" Stroke="Black" d:IsLocked="True"/>
+            <Rectangle x:Name="FrontRectDatabase" Stroke="Black" Margin="0.003,0,0,0" RenderTransformOrigin="0.5,0.503" d:IsLocked="True">
+                <Rectangle.Fill>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="White" Offset="0"/>
+                        <GradientStop Offset="1"/>
+                        <GradientStop Color="#C8A9A5A5" Offset="0.031"/>
+                        <GradientStop Color="#8F605F5F" Offset="0.597"/>
+                        <GradientStop Color="#49454545" Offset="0.938"/>
+                        <GradientStop Color="#B06A6767" Offset="0.31"/>
+                    </LinearGradientBrush>
+                </Rectangle.Fill>
+            </Rectangle>
+            <Grid x:Name="containerDataServer" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="80,80,0,0" Width="400" Height="185" d:LayoutOverrides="VerticalAlignment">
+                <Grid.Effect>
+                    <DropShadowEffect/>
+                </Grid.Effect>
+                <TextBox x:Name="txtDbServer" HorizontalAlignment="Left" Height="25" Margin="180,40,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="175"/>
+                <TextBox x:Name="txtDbCredUsername" HorizontalAlignment="Left" Height="25" Margin="180,80,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="175"/>
+                <TextBox x:Name="txtDbCredPassword" HorizontalAlignment="Left" Height="25" Margin="180,120,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="175"/>
+                <Label Content="Server Name" HorizontalAlignment="Left" Height="25" Margin="40,40,0,0" VerticalAlignment="Top" Width="120" FontWeight="Bold" Foreground="White"/>
+                <Label Content="Username" HorizontalAlignment="Left" Height="25" Margin="40,80,0,0" VerticalAlignment="Top" Width="120" FontWeight="Bold" Foreground="White"/>
+                <Label Content="Password" HorizontalAlignment="Left" Height="25" Margin="40,120,0,0" VerticalAlignment="Top" Width="120" FontWeight="Bold" Foreground="White"/>
+                <TextBlock HorizontalAlignment="Left" Height="25" Margin="5,5,0,0" TextWrapping="Wrap" Text="SERVER" VerticalAlignment="Top" Width="86" FontFamily="Tahoma" FontWeight="Bold" FontSize="16" Foreground="White"/>
+            </Grid>
+            <Grid x:Name="containerDataDatabase" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,80,80,0" Width="400" Height="200">
+                <Grid.Effect>
+                    <DropShadowEffect/>
+                </Grid.Effect>
+                <TextBox x:Name="txtDbDatabase" HorizontalAlignment="Left" Margin="180,40,0,0" TextWrapping="Wrap" Width="175" Height="25" VerticalAlignment="Top"/>
+                <TextBox x:Name="txtDbUsername" HorizontalAlignment="Left" Margin="180,80,0,0" TextWrapping="Wrap" Width="175" Height="25" VerticalAlignment="Top"/>
+                <TextBox x:Name="txtDbPassword" HorizontalAlignment="Left" Margin="180,120,0,0" TextWrapping="Wrap" Width="175" Height="25" VerticalAlignment="Top"/>
+                <Label Content="Database" HorizontalAlignment="Left" Height="25" Margin="40,40,0,0" VerticalAlignment="Top" Width="120" FontWeight="Bold" Foreground="White"/>
+                <Label Content="Username" HorizontalAlignment="Left" Height="25" Margin="40,80,0,0" VerticalAlignment="Top" Width="120" FontWeight="Bold" Foreground="White"/>
+                <Label Content="Password" HorizontalAlignment="Left" Height="25" Margin="40,120,0,0" VerticalAlignment="Top" Width="120" FontWeight="Bold" Foreground="White"/>
+                <TextBlock Height="25" Margin="5,5,0,0" TextWrapping="Wrap" Text="DATABASE" VerticalAlignment="Top" FontSize="16" FontWeight="Bold" FontFamily="Tahoma" HorizontalAlignment="Left" Width="86" Foreground="White"/>
+            </Grid>
+            <Button x:Name="btnDatabaseSimpan" Content="SIMPAN" HorizontalAlignment="Left" Height="40" Margin="200,320,0,0" Style="{DynamicResource GlassButton}" VerticalAlignment="Top" Width="80" Foreground="White" FontFamily="Tahoma" FontWeight="Bold" Click="btnDatabaseSimpan_Click">
+                <Button.Effect>
+                    <DropShadowEffect/>
+                </Button.Effect>
+            </Button>
+            <Button x:Name="btnDatabaseUbah" Content="UBAH" HorizontalAlignment="Center" Height="40" Margin="0,320,0,0" Style="{DynamicResource GlassButton}" VerticalAlignment="Top" Width="80" Foreground="White" FontFamily="Tahoma" FontWeight="Bold" Click="btnDatabaseUbah_Click">
+                <Button.Effect>
+                    <DropShadowEffect/>
+                </Button.Effect>
+            </Button>
+            <Button x:Name="btnDatabaseReset" Content="RESET" Height="40" Margin="0,320,200,0" Style="{DynamicResource GlassButton}" VerticalAlignment="Top" Foreground="White" FontFamily="Tahoma" FontWeight="Bold" HorizontalAlignment="Right" Width="80" Click="btnDatabaseReset_Click">
+                <Button.Effect>
+                    <DropShadowEffect/>
+                </Button.Effect>
+            </Button>
+        </Grid>
+
+        <Grid x:Name="containerPelanggan" Margin="0,158,0,0" Height="569" Width="1051" HorizontalAlignment="Left" VerticalAlignment="Top" d:IsHidden="True">
+            <Rectangle x:Name="BackRectPelanggan" Fill="White" Stroke="Black" d:IsLocked="True"/>
+            <Rectangle x:Name="FrontRectPelanggan" Stroke="Black" RenderTransformOrigin="0.5,0.503" Margin="0,0,0.003,0" d:IsLocked="True">
+                <Rectangle.Fill>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="White" Offset="0"/>
+                        <GradientStop Offset="1"/>
+                        <GradientStop Color="#C8A9A5A5" Offset="0.031"/>
+                        <GradientStop Color="#8F605F5F" Offset="0.597"/>
+                        <GradientStop Color="#49454545" Offset="0.938"/>
+                        <GradientStop Color="#B06A6767" Offset="0.31"/>
+                    </LinearGradientBrush>
+                </Rectangle.Fill>
+            </Rectangle>
+            <TextBox x:Name="txtId" HorizontalAlignment="Left" Height="25" Margin="200,21.046,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="279.998" KeyDown="CariPelanggan">
+                <TextBox.Effect>
+                    <DropShadowEffect/>
+                </TextBox.Effect>
+            </TextBox>
+            <TextBox x:Name="txtNama" HorizontalAlignment="Left" Height="25" Margin="200,61.046,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="279.998" TextChanged="CariNama">
+                <TextBox.Effect>
+                    <DropShadowEffect/>
+                </TextBox.Effect>
+            </TextBox>
+            <DatePicker x:Name="calTglMulai" HorizontalAlignment="Left" Height="25" Margin="200,101.031,0,0" VerticalAlignment="Top" Width="279.998">
+                <DatePicker.Effect>
+                    <DropShadowEffect/>
+                </DatePicker.Effect>
+            </DatePicker>
+            <TextBox x:Name="txtJumlahTv" HorizontalAlignment="Left" Height="25" Margin="200,141.046,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="279.998">
+                <TextBox.Effect>
+                    <DropShadowEffect/>
+                </TextBox.Effect>
+            </TextBox>
+            <TextBox x:Name="txtAlamat" HorizontalAlignment="Left" Height="25" Margin="200,181.046,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="279.998">
+                <TextBox.Effect>
+                    <DropShadowEffect/>
+                </TextBox.Effect>
+            </TextBox>
+            <RadioButton x:Name="rdbStatusAktif" Content="Aktif" Height="18" Margin="204,218,0,0" VerticalAlignment="Top" FontFamily="Tahoma" FontWeight="Bold" Foreground="White" HorizontalAlignment="Left" Width="58.5" Checked="PelangganAktif">
+                <RadioButton.Effect>
+                    <DropShadowEffect/>
+                </RadioButton.Effect>
+            </RadioButton>
+            <RadioButton x:Name="rdbStatusNonAktif" Content="Non Aktif" Height="21" Margin="313.5,218,0,0" VerticalAlignment="Top" FontFamily="Tahoma" FontWeight="Bold" Foreground="White" HorizontalAlignment="Left" Width="85.5" Checked="PelangganNonAktif">
+                <RadioButton.Effect>
+                    <DropShadowEffect/>
+                </RadioButton.Effect>
+            </RadioButton>
+            <Label Content="Id Pelanggan" HorizontalAlignment="Left" Height="25" Margin="40,21.046,0,0" VerticalAlignment="Top" Width="120" Foreground="White" FontWeight="Bold" FontFamily="Tahoma">
+                <Label.Effect>
+                    <DropShadowEffect/>
+                </Label.Effect>
+            </Label>
+            <Label Content="Nama Pelanggan" HorizontalAlignment="Left" Height="34" Margin="40,61.046,0,0" VerticalAlignment="Top" Width="120" Foreground="White" FontWeight="Bold" FontFamily="Tahoma">
+                <Label.Effect>
+                    <DropShadowEffect/>
+                </Label.Effect>
+            </Label>
+            <Label Content="Jumlah Tv" HorizontalAlignment="Left" Height="25" Margin="40,141.046,0,0" VerticalAlignment="Top" Width="120" Foreground="White" FontWeight="Bold" FontFamily="Tahoma">
+                <Label.Effect>
+                    <DropShadowEffect/>
+                </Label.Effect>
+            </Label>
+            <Label Content="Alamat" HorizontalAlignment="Left" Height="25" Margin="40,181.046,0,0" VerticalAlignment="Top" Width="120" Foreground="White" FontWeight="Bold" FontFamily="Tahoma">
+                <Label.Effect>
+                    <DropShadowEffect/>
+                </Label.Effect>
+            </Label>
+            <Label Content="Tanggal Mulai" HorizontalAlignment="Left" Height="25" Margin="40,101.046,0,0" VerticalAlignment="Top" Width="120" Foreground="White" FontWeight="Bold" FontFamily="Tahoma" d:LayoutOverrides="HorizontalAlignment">
+                <Label.Effect>
+                    <DropShadowEffect/>
+                </Label.Effect>
+            </Label>
+            <Border BorderBrush="White" BorderThickness="1" Margin="649,21,0,0" Height="111" VerticalAlignment="Top" HorizontalAlignment="Left" Width="360">
+                <Border.Effect>
+                    <DropShadowEffect/>
+                </Border.Effect>
+                <Grid x:Name="containerPelangganPendaftaran" Margin="9.504,7,2.504,6.5" Width="346">
+                    <TextBlock Margin="4,4,0,0" TextWrapping="Wrap" Text="Pembayaran" Foreground="#FFF7F7F7" FontWeight="Bold" FontFamily="Tahoma" FontSize="16" Height="31.5" VerticalAlignment="Top" HorizontalAlignment="Left" Width="104">
+                        <TextBlock.Effect>
+                            <DropShadowEffect BlurRadius="0" Opacity="0"/>
+                        </TextBlock.Effect>
+                    </TextBlock>
+                    <Label x:Name="Tipe1" Content="Pendaftaran" HorizontalAlignment="Left" Height="25" Margin="16,33,0,0" VerticalAlignment="Top" Width="100" FontWeight="Bold" FontFamily="Tahoma" Background="#00000000" Foreground="White"/>
+                    <Label Content="Iuran" HorizontalAlignment="Left" Height="25" Margin="16,65,0,0" VerticalAlignment="Top" Width="100" Foreground="White" FontWeight="Bold" FontFamily="Tahoma"/>
+                    <TextBox x:Name="txtDetailPendaftaran" Height="25" Margin="152,33,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="180" HorizontalAlignment="Left" TextChanged="TextChanged"/>
+                    <TextBox x:Name="txtDetailIuran" Height="25" Margin="152,65,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="180" HorizontalAlignment="Left" TextChanged="TextChanged"/>
+                </Grid>
+            </Border>
+            <Border BorderBrush="White" BorderThickness="1" Margin="649,156,0,0" HorizontalAlignment="Left" Width="360" Height="144" VerticalAlignment="Top">
+                <Border.Effect>
+                    <DropShadowEffect/>
+                </Border.Effect>
+                <Grid x:Name="containerPelangganContact" Margin="7,7,0,0" Width="346" HorizontalAlignment="Left" VerticalAlignment="Top" Height="134.667">
+                    <TextBlock Margin="4,4,0,0" TextWrapping="Wrap" Text="Kontak" Foreground="#FFF7F7F7" FontWeight="Bold" FontFamily="Tahoma" FontSize="16" Height="31.5" VerticalAlignment="Top" HorizontalAlignment="Left" Width="88.5">
+                        <TextBlock.Effect>
+                            <DropShadowEffect BlurRadius="0" Opacity="0"/>
+                        </TextBlock.Effect>
+                    </TextBlock>
+                    <Label x:Name="Tipe" Content="Tipe" HorizontalAlignment="Left" Height="25" Margin="16,32,0,0" VerticalAlignment="Top" Width="100" FontWeight="Bold" FontFamily="Tahoma" Background="#00000000" Foreground="White"/>
+                    <Label Content="Detail" HorizontalAlignment="Left" Height="25" Margin="16,65,0,0" VerticalAlignment="Top" Width="100" Foreground="White" FontWeight="Bold" FontFamily="Tahoma"/>
+                    <ComboBox x:Name="cbPelangganTipeKontak" Height="25" Margin="151.988,32,14.012,0" VerticalAlignment="Top" SelectionChanged="PilihTipeKontakPelanggan"/>
+                    <TextBox x:Name="txtPelangganDetailKontak" Height="25" Margin="151.988,65,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="180" HorizontalAlignment="Left"/>
+                    <Button x:Name="btnPelangganKontakTambah" Content="TAMBAH" Height="25" Margin="152,100,0,0" Style="{DynamicResource GlassButton}" VerticalAlignment="Top" Foreground="White" Click="TambahKontakPelanggan" Width="80" HorizontalAlignment="Left">
+                        <Button.Effect>
+                            <DropShadowEffect/>
+                        </Button.Effect>
+                    </Button>
+                    <Button x:Name="btnPelangganKontakHapus" Content="HAPUS" HorizontalAlignment="Left" Height="25" Margin="250,100,0,0" Style="{DynamicResource GlassButton}" VerticalAlignment="Top" Width="80" Foreground="White" Click="HapusKontakPelanggan">
+                        <Button.Effect>
+                            <DropShadowEffect/>
+                        </Button.Effect>
+                    </Button>
+                </Grid>
+            </Border>
+            <Border BorderBrush="White" BorderThickness="1" Margin="448.05,443.361,240.95,0" Height="158.167" VerticalAlignment="Top" Visibility="Hidden">
+                <Border.Effect>
+                    <DropShadowEffect/>
+                </Border.Effect>
+                <Grid x:Name="containerPelangganStatus" Margin="7,7,0,0" Width="346" HorizontalAlignment="Left" VerticalAlignment="Top" Height="142.167">
+                    <TextBlock Margin="8,8,0,0" TextWrapping="Wrap" Text="Status" Foreground="#FFF7F7F7" FontWeight="Bold" FontFamily="Tahoma" FontSize="16" Height="31.5" VerticalAlignment="Top" HorizontalAlignment="Left" Width="88.5">
+                        <TextBlock.Effect>
+                            <DropShadowEffect BlurRadius="0" Opacity="0"/>
+                        </TextBlock.Effect>
+                    </TextBlock>
+                    <Label x:Name="Tipe2" Content="Tipe" HorizontalAlignment="Left" Height="25" Margin="16,40,0,0" VerticalAlignment="Top" Width="100" FontWeight="Bold" FontFamily="Tahoma" Background="#00000000" Foreground="White"/>
+                    <Label Content="Keterangan" HorizontalAlignment="Left" Height="25" Margin="16.031,0,0,42.513" VerticalAlignment="Bottom" Width="100" Foreground="White" FontWeight="Bold" FontFamily="Tahoma"/>
+                    <TextBox x:Name="txtPelangganDetailStatus" Height="25" Margin="152.013,0,13.986,42.513" TextWrapping="Wrap" VerticalAlignment="Bottom" Width="180" d:LayoutOverrides="HorizontalMargin"/>
+                    <ComboBox x:Name="cbPelangganTipeStatus" Height="25" Margin="152.004,40,13.996,0" VerticalAlignment="Top"/>
+                    <DatePicker x:Name="calPelangganDetailPerubahan" Height="25" Margin="152.004,0,13.996,7.506" VerticalAlignment="Bottom"/>
+                    <Label Content="Tanggal" HorizontalAlignment="Left" Height="24.481" Margin="16,0,0,7.506" VerticalAlignment="Bottom" Width="100.031" Foreground="White" FontWeight="Bold" FontFamily="Tahoma"/>
+                </Grid>
+            </Border>
+            <DataGrid x:Name="dgPelanggan" Margin="0,305,42,48" HorizontalAlignment="Right" Width="969" MouseDoubleClick="TableClicked">
+                <DataGrid.Effect>
+                    <DropShadowEffect/>
+                </DataGrid.Effect>
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="ID" Binding="{Binding Path=id}"/>
+                    <DataGridTextColumn Header="NAMA" Binding="{Binding Path=nama}"/>
+                    <DataGridTextColumn Header="TANGGAL MULAI" Binding="{Binding Path=tglMulai}"/>
+                </DataGrid.Columns>
+            </DataGrid>
+            <Button x:Name="btnPelangganCari" Content="CARI" Height="25" Margin="499,21,463,0" Style="{DynamicResource GlassButton}" VerticalAlignment="Top" Foreground="White" FontWeight="Bold" FontFamily="Tahoma" Click="CariPelanggan">
+                <Button.Effect>
+                    <DropShadowEffect/>
+                </Button.Effect>
+            </Button>
+            <Button x:Name="btnPelangganTambah" Content="TAMBAH" HorizontalAlignment="Left" Height="25" Margin="40,275,0,0" Style="{DynamicResource GlassButton}" VerticalAlignment="Top" Width="100" Foreground="White" Click="TambahPelanggan">
+                <Button.Effect>
+                    <DropShadowEffect/>
+                </Button.Effect>
+            </Button>
+            <Button x:Name="btnPelangganUbah" Content="UBAH" HorizontalAlignment="Left" Height="25" Margin="152,275,0,0" Style="{DynamicResource GlassButton}" VerticalAlignment="Top" Width="100" Foreground="White" Click="UbahPelanggan">
+                <Button.Effect>
+                    <DropShadowEffect/>
+                </Button.Effect>
+            </Button>
+            <Button x:Name="btnPelangganSimpan" Content="SIMPAN" HorizontalAlignment="Left" Height="25" Margin="264,275,0,0" Style="{DynamicResource GlassButton}" VerticalAlignment="Top" Width="100" Foreground="White" Click="SimpanPelanggan">
+                <Button.Effect>
+                    <DropShadowEffect/>
+                </Button.Effect>
+            </Button>
+            <Button x:Name="btnPelangganHapus" Content="HAPUS" HorizontalAlignment="Left" Height="25" Margin="376,275,0,0" Style="{DynamicResource GlassButton}" VerticalAlignment="Top" Width="100" Foreground="White" Click="HapusPelanggan">
+                <Button.Effect>
+                    <DropShadowEffect/>
+                </Button.Effect>
+            </Button>
+            <Button x:Name="btnPelangganReset" Content="RESET" HorizontalAlignment="Left" Height="25" Margin="488,275,0,0" Style="{DynamicResource GlassButton}" VerticalAlignment="Top" Width="100" Foreground="White" Click="ResetPelanggan">
+                <Button.Effect>
+                    <DropShadowEffect/>
+                </Button.Effect>
+            </Button>
+            <Label Content="Status" HorizontalAlignment="Left" Height="25" Margin="40,212.546,0,0" VerticalAlignment="Top" Width="120" Foreground="White" FontWeight="Bold" FontFamily="Tahoma">
+                <Label.Effect>
+                    <DropShadowEffect/>
+                </Label.Effect>
+            </Label>
+            <Label x:Name="lblKeterangan" Content="Keterangan" HorizontalAlignment="Left" Height="25" Margin="40,241,0,0" VerticalAlignment="Top" Width="120" Foreground="White" FontWeight="Bold" FontFamily="Tahoma">
+                <Label.Effect>
+                    <DropShadowEffect/>
+                </Label.Effect>
+            </Label>
+            <TextBox x:Name="txtKeterangan" HorizontalAlignment="Left" Height="25" Margin="200,241,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="280">
+                <TextBox.Effect>
+                    <DropShadowEffect/>
+                </TextBox.Effect>
+            </TextBox>
+        </Grid>
+
+        <Grid x:Name="containerPembayaran" Margin="0,158,0,1" Width="1051" Visibility="Visible">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.731*"/>
+                <ColumnDefinition Width="0.269*"/>
+            </Grid.ColumnDefinitions>
+            <Rectangle x:Name="BackRectPembayaran" Fill="White" Stroke="Black" Margin="-0.003,0,0.003,0" d:IsLocked="True" Grid.ColumnSpan="2"/>
+            <Rectangle x:Name="FrontRectPembayaran" Stroke="Black" Margin="0.003,0,0,0" RenderTransformOrigin="0.5,0.503" d:IsLocked="True" Grid.ColumnSpan="2">
+                <Rectangle.Fill>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="White" Offset="0"/>
+                        <GradientStop Offset="1"/>
+                        <GradientStop Color="#C8A9A5A5" Offset="0.031"/>
+                        <GradientStop Color="#8F605F5F" Offset="0.597"/>
+                        <GradientStop Color="#49454545" Offset="0.938"/>
+                        <GradientStop Color="#B06A6767" Offset="0.31"/>
+                    </LinearGradientBrush>
+                </Rectangle.Fill>
+            </Rectangle>
+            <TextBox x:Name="txtIdPelanggan" Height="23" Margin="127,27,472,0" TextWrapping="Wrap" VerticalAlignment="Top" KeyDown="CariPelangganPembayaran">
+                <TextBox.Effect>
+                    <DropShadowEffect/>
+                </TextBox.Effect>
+            </TextBox>
+            <TextBox x:Name="txtKeteranganPembayaran" Margin="127,90,0,0" TextWrapping="Wrap" Height="23" VerticalAlignment="Top" HorizontalAlignment="Left" Width="169" KeyDown="KeyPressed">
+                <TextBox.Effect>
+                    <DropShadowEffect/>
+                </TextBox.Effect>
+            </TextBox>
+            <Label Content="Id Pelanggan" HorizontalAlignment="Left" Height="25" Margin="10,24,0,0" VerticalAlignment="Top" Width="100" Foreground="White" FontFamily="Tahoma" FontWeight="Bold">
+                <Label.Effect>
+                    <DropShadowEffect/>
+                </Label.Effect>
+            </Label>
+            <Button x:Name="btnCariPelanggan" Content="CARI" Height="25" Margin="306,26,391,0" Style="{DynamicResource GlassButton}" VerticalAlignment="Top" Foreground="White" FontFamily="Tahoma" FontWeight="Bold" Click="CariPelangganPembayaran">
+                <Button.Effect>
+                    <DropShadowEffect/>
+                </Button.Effect>
+            </Button>
+            <Label
+    		Content="Penagih" Margin="10,89,0,0" Foreground="White" FontFamily="Tahoma" FontWeight="Bold" VerticalAlignment="Top" HorizontalAlignment="Left" Width="100">
+                <Label.Effect
+    		>
+                    <DropShadowEffect
+    		/>
+                </Label.Effect>
+            </Label>
+            <Button
+    		x:Name="btnPembayaranCetak" Content="OK" HorizontalAlignment="Left" Height="29" Margin="201,33,0,0" Style="{DynamicResource GlassButton}" VerticalAlignment="Top" Width="70" Foreground="#FFFDFDFD" FontFamily="Tahoma" FontWeight="Bold" Click="ButtonOkClicked" Grid.Column="1">
+                <Button.Effect
+    		>
+                    <DropShadowEffect
+    		/>
+                </Button.Effect>
+            </Button>
+            <Button VerticalAlignment="Top" Style="{DynamicResource GlassButton}" x:Name="btnPembayaranReset" Margin="201,73,12,0" Height="29" FontFamily="Tahoma" FontWeight="Bold" Foreground="#FFFDFDFD" Content="RESET" Click="ResetPembayaran" Grid.Column="1">
+                <Button.Effect
+    		>
+                    <DropShadowEffect
+    		/>
+                </Button.Effect>
+            </Button>
+            <GroupBox Header="Detail Pembayaran" Margin="390,15,0,0" FontFamily="Tahoma" FontWeight="Bold" Foreground="White" HorizontalAlignment="Left" Width="288" VerticalAlignment="Top" Height="100">
+                <GroupBox.Effect>
+                    <DropShadowEffect/>
+                </GroupBox.Effect>
+                <Grid>
+                    <Label Content="Bulan" Height="25" Margin="10,10,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="Tahoma" FontWeight="Bold" HorizontalAlignment="Left" Width="47"/>
+                    <ComboBox x:Name="cbBulan" Height="20" VerticalAlignment="Top" RenderTransformOrigin="0.482,0.42" Margin="62,10,0,0" HorizontalAlignment="Left" Width="86" KeyDown="KeyPressed">
+                        <System:String>-Pilih Bulan-</System:String>
+                        <System:String>Januari</System:String>
+                        <System:String>Februari</System:String>
+                        <System:String>Maret</System:String>
+                        <System:String>April</System:String>
+                        <System:String>Mei</System:String>
+                        <System:String>Juni</System:String>
+                        <System:String>Juli</System:String>
+                        <System:String>Agustus</System:String>
+                        <System:String>September</System:String>
+                        <System:String>Oktober</System:String>
+                        <System:String>November</System:String>
+                        <System:String>Desember</System:String>
+                    </ComboBox>
+                    <Label Content="Tahun" Height="25" Margin="153,10,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="Tahoma" FontWeight="Bold" HorizontalAlignment="Left" Width="47"/>
+                    <ComboBox x:Name="cbTahun" Height="20" VerticalAlignment="Top" RenderTransformOrigin="0.482,0.42" Margin="205,10,0,0" HorizontalAlignment="Left" Width="60" KeyDown="KeyPressed">
+                        <System:String>-Pilih Tahun-</System:String>
+                        <System:String>2012</System:String>
+                        <System:String>2013</System:String>
+                        <System:String>2014</System:String>
+                        <System:String>2015</System:String>
+                        <System:String>2016</System:String>
+                    </ComboBox>
+                    <DatePicker x:Name="calTanggalBayar" HorizontalAlignment="Left" Margin="113,44,0,0" VerticalAlignment="Top" Width="152" KeyDown="KeyPressed"/>
+                    <Label Content="Tanggal Bayar" Height="25" Margin="10,44,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="Tahoma" FontWeight="Bold" HorizontalAlignment="Left" Width="98"/>
+                </Grid>
+            </GroupBox>
+            <DataGrid x:Name="dgPembayaran" Height="427" Margin="542,131,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="497" IsReadOnly="True" MouseDoubleClick="PembayaranTableDoubleClicked" MouseRightButtonDown="PembayaranTableRightClicked" Grid.ColumnSpan="2">
+                <DataGrid.Effect>
+                    <DropShadowEffect/>
+                </DataGrid.Effect>
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="TAHUN TAGIHAN"/>
+                    <DataGridTextColumn Header="BULAN TAGIHAN"/>
+                    <DataGridTextColumn Header="TANGGAL BAYAR"/>
+                </DataGrid.Columns>
+            </DataGrid>
+            <GroupBox Header="Pembayaran" Margin="685,15,0,0" FontFamily="Tahoma" FontWeight="Bold" Foreground="White" HorizontalAlignment="Left" Width="266" Height="100" VerticalAlignment="Top" Grid.ColumnSpan="2">
+                <GroupBox.Effect>
+                    <DropShadowEffect/>
+                </GroupBox.Effect>
+                <Grid>
+                    <TextBox x:Name="txtIuranBulanan" HorizontalAlignment="Left" Margin="115,10,0,0" TextWrapping="Wrap" Width="130" VerticalAlignment="Top" KeyDown="KeyPressed"/>
+                    <Label Content="Iuran Bulanan" Margin="10,10,0,0" Foreground="White" FontFamily="Tahoma" FontWeight="Bold" HorizontalAlignment="Left" Height="25" VerticalAlignment="Top" Width="100"/>
+                    <TextBox x:Name="txtJumlahBayar" HorizontalAlignment="Left" Margin="117,40,0,0" TextWrapping="Wrap" Width="127" Height="20" VerticalAlignment="Top" KeyDown="KeyPressed" TextChanged="TextChanged"/>
+                    <Label Content="Jumlah Bayar" Margin="10,40,0,0" Foreground="White" FontFamily="Tahoma" FontWeight="Bold" Height="25" VerticalAlignment="Top" HorizontalAlignment="Left" Width="100"/>
+                </Grid>
+            </GroupBox>
+            <TextBox x:Name="txtNamaPelanggan" Height="23" Margin="127,58,472,0" TextWrapping="Wrap" VerticalAlignment="Top" TextChanged="CariNamaPembayaran">
+                <TextBox.Effect>
+                    <DropShadowEffect/>
+                </TextBox.Effect>
+            </TextBox>
+            <Label Content="Nama Pelanggan" HorizontalAlignment="Left" Height="24" Margin="10,57,0,0" VerticalAlignment="Top" Width="112" Foreground="White" FontFamily="Tahoma" FontWeight="Bold">
+                <Label.Effect>
+                    <DropShadowEffect/>
+                </Label.Effect>
+            </Label>
+            <DataGrid x:Name="dgDaftarPelanggan" Height="427" Margin="10,131,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="517" IsReadOnly="True" MouseDoubleClick="PelangganTableDoubleClicked">
+                <DataGrid.Effect>
+                    <DropShadowEffect/>
+                </DataGrid.Effect>
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="ID PELANGGAN"/>
+                    <DataGridTextColumn Header="NAMA PELANGGAN"/>
+                </DataGrid.Columns>
+            </DataGrid>
+        </Grid>
+
+        <Grid x:Name="containerTipeKontak" Margin="0,158.739,0,-1" Width="1051" Visibility="Visible" d:IsHidden="True">
+            <Rectangle x:Name="BackRectTipeKontak" Fill="White" Stroke="Black" Margin="-0.003,0,0.003,0" d:IsLocked="True"/>
+            <Rectangle x:Name="FrontRectTipeKontak" Stroke="Black" Margin="0,0,-0.003,0" RenderTransformOrigin="0.5,0.503" d:IsLocked="True">
+                <Rectangle.Fill>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="White" Offset="0"/>
+                        <GradientStop Offset="1"/>
+                        <GradientStop Color="#C8A9A5A5" Offset="0.031"/>
+                        <GradientStop Color="#8F605F5F" Offset="0.597"/>
+                        <GradientStop Color="#49454545" Offset="0.938"/>
+                        <GradientStop Color="#B06A6767" Offset="0.31"/>
+                    </LinearGradientBrush>
+                </Rectangle.Fill>
+            </Rectangle>
+            <TextBox x:Name="txtKodeKontak" HorizontalAlignment="Left" Height="25" Margin="195,80,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="200">
+                <TextBox.Effect>
+                    <DropShadowEffect/>
+                </TextBox.Effect>
+            </TextBox>
+            <TextBox x:Name="txtDetailKontak" HorizontalAlignment="Left" Height="25" Margin="195,122,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="200">
+                <TextBox.Effect>
+                    <DropShadowEffect/>
+                </TextBox.Effect>
+            </TextBox>
+            <Label Content="Kode" HorizontalAlignment="Left" Height="25" Margin="75,80,0,0" VerticalAlignment="Top" Width="80" FontFamily="Tahoma" FontWeight="Bold" Foreground="White">
+                <Label.Effect>
+                    <DropShadowEffect/>
+                </Label.Effect>
+            </Label>
+            <Label Content="Detail" HorizontalAlignment="Left" Height="25" Margin="75,122,0,0" VerticalAlignment="Top" Width="80" FontFamily="Tahoma" FontWeight="Bold" Foreground="White">
+                <Label.Effect>
+                    <DropShadowEffect/>
+                </Label.Effect>
+            </Label>
+            <TextBlock HorizontalAlignment="Left" Height="37.5" Margin="16.031,16.016,0,0" TextWrapping="Wrap" Text="TIPE KONTAK" VerticalAlignment="Top" Width="191" FontFamily="Tahoma" FontWeight="Bold" FontSize="21.333" Foreground="White">
+                <TextBlock.Effect>
+                    <DropShadowEffect/>
+                </TextBlock.Effect>
+            </TextBlock>
+            <Button x:Name="btnKontakTambah" Content="TAMBAH" Height="25" Margin="197,169,0,0" Style="{DynamicResource GlassButton}" VerticalAlignment="Top" HorizontalAlignment="Left" Width="80" Foreground="White" FontFamily="Tahoma" FontWeight="Bold" Click="btnKontakTambah_Click">
+                <Button.Effect>
+                    <DropShadowEffect/>
+                </Button.Effect>
+            </Button>
+            <Button x:Name="btnKontakUbah" Content="UBAH" HorizontalAlignment="Left" Height="25" Margin="290,169,0,0" Style="{DynamicResource GlassButton}" VerticalAlignment="Top" Width="80" Foreground="White" FontFamily="Tahoma" FontWeight="Bold" Click="btnKontakUbah_Click">
+                <Button.Effect>
+                    <DropShadowEffect/>
+                </Button.Effect>
+            </Button>
+            <Button x:Name="btnKontakSimpan" Content="SIMPAN" HorizontalAlignment="Left" Height="25" Margin="385,169,0,0" Style="{DynamicResource GlassButton}" VerticalAlignment="Top" Width="80" Foreground="White" FontFamily="Tahoma" FontWeight="Bold" Click="btnKontakSimpan_Click">
+                <Button.Effect>
+                    <DropShadowEffect/>
+                </Button.Effect>
+            </Button>
+            <Button x:Name="btnKontakHapus" Content="HAPUS" Height="25" Margin="480,169,491,0" Style="{DynamicResource GlassButton}" VerticalAlignment="Top" Foreground="White" FontFamily="Tahoma" FontWeight="Bold" Click="btnKontakHapus_Click">
+                <Button.Effect>
+                    <DropShadowEffect/>
+                </Button.Effect>
+            </Button>
+            <Button x:Name="btnKontakReset" Content="RESET" HorizontalAlignment="Right" Height="25" Margin="0,169,394,0" Style="{DynamicResource GlassButton}" VerticalAlignment="Top" Width="80" Foreground="White" FontFamily="Tahoma" FontWeight="Bold" Click="btnKontakReset_Click">
+                <Button.Effect>
+                    <DropShadowEffect/>
+                </Button.Effect>
+            </Button>
+            <Button x:Name="btnKontakCari" Content="CARI" Height="25" Margin="412,80,0,0" Style="{DynamicResource GlassButton}" VerticalAlignment="Top" Foreground="White" FontFamily="Tahoma" FontWeight="Bold" HorizontalAlignment="Left" Width="80" Click="btnKontakCari_Click">
+                <Button.Effect>
+                    <DropShadowEffect/>
+                </Button.Effect>
+            </Button>
+            <DataGrid x:Name="dgTipeKontak" Margin="16,211,26,0" Height="302" VerticalAlignment="Top">
+                <DataGrid.Effect>
+                    <DropShadowEffect/>
+                </DataGrid.Effect>
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="KODE" Binding="{Binding Path=kode}"/>
+                    <DataGridTextColumn Header="DETAIL" Binding="{Binding Path=detail}"/>
+                </DataGrid.Columns>
+            </DataGrid>
+        </Grid>
+
+        <Grid x:Name="containerLogin" Margin="0,159,0,0" Width="1051" Visibility="Visible" d:IsHidden="True">
+            <Rectangle x:Name="BackRectLogin" Fill="White" Stroke="Black" d:IsLocked="True"/>
+            <Rectangle x:Name="FrontRectLogin" Stroke="Black" RenderTransformOrigin="0.5,0.503" d:IsLocked="True">
+                <Rectangle.Fill>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="White" Offset="0"/>
+                        <GradientStop Offset="1"/>
+                        <GradientStop Color="#C8A9A5A5" Offset="0.031"/>
+                        <GradientStop Color="#8F605F5F" Offset="0.597"/>
+                        <GradientStop Color="#49454545" Offset="0.938"/>
+                        <GradientStop Color="#B06A6767" Offset="0.31"/>
+                    </LinearGradientBrush>
+                </Rectangle.Fill>
+            </Rectangle>
+            <TextBlock HorizontalAlignment="Left" Height="37" Margin="17,17,0,0" TextWrapping="Wrap" Text="LOGIN" VerticalAlignment="Top" Width="130" Foreground="White" FontFamily="Tahoma" FontWeight="Bold" FontSize="21.333">
+                <TextBlock.Effect>
+                    <DropShadowEffect/>
+                </TextBlock.Effect>
+            </TextBlock>
+            <TextBox x:Name="txtUsernameLogin" HorizontalAlignment="Left" Height="25" Margin="200,80.016,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="200">
+                <TextBox.Effect>
+                    <DropShadowEffect/>
+                </TextBox.Effect>
+            </TextBox>
+            <TextBox x:Name="txtPasswordLogin" HorizontalAlignment="Left" Height="25" Margin="200,120,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="200">
+                <TextBox.Effect>
+                    <DropShadowEffect/>
+                </TextBox.Effect>
+            </TextBox>
+            <TextBox x:Name="txtNamaLogin" HorizontalAlignment="Left" Height="25" Margin="200,160,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="200">
+                <TextBox.Effect>
+                    <DropShadowEffect/>
+                </TextBox.Effect>
+            </TextBox>
+            <ComboBox x:Name="cbRoleLogin" HorizontalAlignment="Left" Height="25" Margin="200,200,0,0" VerticalAlignment="Top" Width="200">
+                <ComboBox.Effect>
+                    <DropShadowEffect/>
+                </ComboBox.Effect>
+            </ComboBox>
+            <Label Content="USERNAME" HorizontalAlignment="Left" Height="25" Margin="80,80,0,0" VerticalAlignment="Top" Width="80" FontWeight="Bold" FontFamily="Tahoma" Foreground="White">
+                <Label.Effect>
+                    <DropShadowEffect/>
+                </Label.Effect>
+            </Label>
+            <Label Content="PASSWORD" HorizontalAlignment="Left" Height="25" Margin="80,120,0,0" VerticalAlignment="Top" Width="80" FontWeight="Bold" FontFamily="Tahoma" Foreground="White">
+                <Label.Effect>
+                    <DropShadowEffect/>
+                </Label.Effect>
+            </Label>
+            <Label Content="NAMA" HorizontalAlignment="Left" Height="25" Margin="80,160,0,0" VerticalAlignment="Top" Width="80" FontWeight="Bold" FontFamily="Tahoma" Foreground="White">
+                <Label.Effect>
+                    <DropShadowEffect/>
+                </Label.Effect>
+            </Label>
+            <Label Content="ROLE" HorizontalAlignment="Left" Height="25" Margin="80,200,0,0" VerticalAlignment="Top" Width="80" FontWeight="Bold" FontFamily="Tahoma" Foreground="White">
+                <Label.Effect>
+                    <DropShadowEffect/>
+                </Label.Effect>
+            </Label>
+            <Button x:Name="btnLoginCari" Content="CARI" HorizontalAlignment="Left" Height="25" Margin="441,80,0,0" Style="{DynamicResource GlassButton}" VerticalAlignment="Top" Width="80" Foreground="White" FontWeight="Bold" FontFamily="Tahoma" Click="btnLoginCari_Click">
+                <Button.Effect>
+                    <DropShadowEffect/>
+                </Button.Effect>
+            </Button>
+            <Button x:Name="btnLoginTambah" Content="TAMBAH" HorizontalAlignment="Left" Margin="80,280,0,0" Style="{DynamicResource GlassButton}" Width="80" FontFamily="Tahoma" FontWeight="Bold" Foreground="White" Height="25" VerticalAlignment="Top" Click="btnLoginTambah_Click">
+                <Button.Effect>
+                    <DropShadowEffect/>
+                </Button.Effect>
+            </Button>
+            <Button x:Name="btnLoginUbah" Content="UBAH" HorizontalAlignment="Left" Margin="200,280,0,0" Style="{DynamicResource GlassButton}" Width="80" FontFamily="Tahoma" FontWeight="Bold" Foreground="White" Height="25" VerticalAlignment="Top" Click="btnLoginUbah_Click">
+                <Button.Effect>
+                    <DropShadowEffect/>
+                </Button.Effect>
+            </Button>
+            <Button x:Name="btnLoginHapus" Content="HAPUS" Margin="440,280,0,0" Style="{DynamicResource GlassButton}" FontFamily="Tahoma" FontWeight="Bold" Foreground="White" Width="80" Height="25" VerticalAlignment="Top" HorizontalAlignment="Left" Click="btnLoginHapus_Click">
+                <Button.Effect>
+                    <DropShadowEffect/>
+                </Button.Effect>
+            </Button>
+            <Button x:Name="btnLoginReset" Content="RESET" HorizontalAlignment="Left" Margin="560,280,0,0" Style="{DynamicResource GlassButton}" Width="80" FontFamily="Tahoma" FontWeight="Bold" Foreground="White" Height="25" VerticalAlignment="Top" Click="btnLoginReset_Click">
+                <Button.Effect>
+                    <DropShadowEffect/>
+                </Button.Effect>
+            </Button>
+            <Button x:Name="btnLoginSimpan" Content="SIMPAN" HorizontalAlignment="Left" Margin="320,280,0,0" Style="{DynamicResource GlassButton}" Width="80" FontFamily="Tahoma" FontWeight="Bold" Foreground="White" Height="25" VerticalAlignment="Top" Click="btnLoginSimpan_Click">
+                <Button.Effect>
+                    <DropShadowEffect/>
+                </Button.Effect>
+            </Button>
+        </Grid>
+    </Grid>
+</Window>

@@ -1,0 +1,17 @@
+﻿<Window x:Class="tvkabel_wpf.DialogBox"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+            Height="110.521"
+            Width="105.548"
+            ShowInTaskbar="False"
+            ResizeMode="NoResize"
+            VerticalAlignment="Center"
+            HorizontalAlignment="Center"
+            Background="White"
+            WindowStartupLocation="CenterOwner">
+    <Grid Margin="0,0,4,1">
+        <Button x:Name="btnEdit" Content="UPDATE" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="79" Click="BtnEdit_Click" Background="{x:Null}" BorderBrush="{x:Null}"/>
+        <Button x:Name="btnHapus" Content="DELETE" HorizontalAlignment="Left" Margin="10,37,0,0" VerticalAlignment="Top" Width="79" Click="BtnHapus_Click" BorderBrush="{x:Null}" Foreground="Black" Background="{x:Null}"/>
+
+    </Grid>
+</Window>

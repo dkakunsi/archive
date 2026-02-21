@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <Server>
+    <Address>localhost</Address>
+    <Username>
+    </Username>
+    <Password>
+    </Password>
+  </Server>
+  <Database>
+    <Name>tvkabel</Name>
+    <Username>tvk</Username>
+    <Password>tvkabel</Password>
+  </Database>
+</Config>
