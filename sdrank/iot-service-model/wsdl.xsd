@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<xsd:schema xmlns:wsdl="http://www.w3.org/ns/wsdl" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.w3.org/ns/wsdl">
+  <xsd:import namespace="http://www.omg.org/XMI" schemaLocation="platform:/plugin/org.eclipse.emf.ecore/model/XMI.xsd"/>
+  <xsd:simpleType name="ElementReferenceType_._member_._1">
+    <xsd:restriction base="xsd:NCName">
+      <xsd:enumeration value="any"/>
+      <xsd:enumeration value="none"/>
+      <xsd:enumeration value="other"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:complexType name="BindingFaultType">
+    <xsd:complexContent>
+      <xsd:extension base="wsdl:ExtensibleDocumentedType">
+        <xsd:attribute name="ref" type="xsd:string" use="required"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="BindingFaultType" type="wsdl:BindingFaultType"/>
+  <xsd:complexType name="BindingOperationFaultType">
+    <xsd:complexContent>
+      <xsd:extension base="wsdl:ExtensibleDocumentedType">
+        <xsd:attribute name="messageLabel" type="xsd:string"/>
+        <xsd:attribute name="ref" type="xsd:string" use="required"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="BindingOperationFaultType" type="wsdl:BindingOperationFaultType"/>
+  <xsd:complexType name="BindingOperationMessageType">
+    <xsd:complexContent>
+      <xsd:extension base="wsdl:ExtensibleDocumentedType">
+        <xsd:attribute name="messageLabel" type="xsd:string"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="BindingOperationMessageType" type="wsdl:BindingOperationMessageType"/>
+  <xsd:complexType name="BindingOperationType">
+    <xsd:complexContent>
+      <xsd:extension base="wsdl:ExtensibleDocumentedType">
+        <xsd:attribute name="ref" type="xsd:string" use="required"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="BindingOperationType" type="wsdl:BindingOperationType"/>
+  <xsd:complexType name="BindingType">
+    <xsd:complexContent>
+      <xsd:extension base="wsdl:ExtensibleDocumentedType">
+        <xsd:attribute name="interface" type="xsd:string"/>
+        <xsd:attribute name="name" type="xsd:string" use="required"/>
+        <xsd:attribute name="type" type="xsd:string" use="required"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="BindingType" type="wsdl:BindingType"/>
+  <xsd:complexType name="DescriptionType">
+    <xsd:annotation>
+      <xsd:documentation>
+        Although correct, this type declaration does not capture
+        all the constraints on the contents of the wsdl:description
+        element as defined by the WSDL 2.0 specification.
+
+        In particular, the ordering constraints wrt elements preceding
+        and following the wsdl:types child element are not captured, as
+        attempts to incorporate such restrictions in the schema
+        ran afoul of the UPA (Unique Particle Attribution) rule
+        in the XML Schema language.
+
+        Please refer to the WSDL 2.0 specification for
+	additional information on the contents of this type.
+      </xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="wsdl:ExtensibleDocumentedType">
+        <xsd:attribute name="targetNamespace" type="xsd:string" use="required"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="DescriptionType" type="wsdl:DescriptionType">
+    <xsd:annotation>
+      <xsd:documentation>
+        Although correct, this type declaration does not capture
+        all the constraints on the contents of the wsdl:description
+        element as defined by the WSDL 2.0 specification.
+
+        In particular, the ordering constraints wrt elements preceding
+        and following the wsdl:types child element are not captured, as
+        attempts to incorporate such restrictions in the schema
+        ran afoul of the UPA (Unique Particle Attribution) rule
+        in the XML Schema language.
+
+        Please refer to the WSDL 2.0 specification for
+	additional information on the contents of this type.
+      </xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="DocumentationType">
+    <xsd:choice maxOccurs="unbounded" minOccurs="0">
+      <xsd:element ref="xmi:Extension"/>
+    </xsd:choice>
+    <xsd:attribute ref="xmi:id"/>
+    <xsd:attributeGroup ref="xmi:ObjectAttribs"/>
+  </xsd:complexType>
+  <xsd:element name="DocumentationType" type="wsdl:DocumentationType"/>
+  <xsd:complexType name="DocumentedType">
+    <xsd:annotation>
+      <xsd:documentation>
+      This type is extended by component types to allow them to be documented.
+      </xsd:documentation>
+    </xsd:annotation>
+    <xsd:choice maxOccurs="unbounded" minOccurs="0">
+      <xsd:element name="documentation" type="wsdl:DocumentationType"/>
+      <xsd:element ref="xmi:Extension"/>
+    </xsd:choice>
+    <xsd:attribute ref="xmi:id"/>
+    <xsd:attributeGroup ref="xmi:ObjectAttribs"/>
+  </xsd:complexType>
+  <xsd:element name="DocumentedType" type="wsdl:DocumentedType">
+    <xsd:annotation>
+      <xsd:documentation>
+      This type is extended by component types to allow them to be documented.
+      </xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="DocumentRoot">
+    <xsd:choice maxOccurs="unbounded" minOccurs="0">
+      <xsd:element ref="xmi:Extension"/>
+    </xsd:choice>
+    <xsd:attribute ref="xmi:id"/>
+    <xsd:attributeGroup ref="xmi:ObjectAttribs"/>
+    <xsd:attribute name="required" type="xsd:string"/>
+  </xsd:complexType>
+  <xsd:element name="DocumentRoot" type="wsdl:DocumentRoot"/>
+  <xsd:complexType name="EndpointType">
+    <xsd:complexContent>
+      <xsd:extension base="wsdl:ExtensibleDocumentedType">
+        <xsd:attribute name="address" type="xsd:string"/>
+        <xsd:attribute name="binding" type="xsd:string" use="required"/>
+        <xsd:attribute name="name" type="xsd:string" use="required"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="EndpointType" type="wsdl:EndpointType"/>
+  <xsd:complexType abstract="true" name="ExtensibleDocumentedType">
+    <xsd:annotation>
+      <xsd:documentation>
+      This type is extended by component types to allow 
+      attributes from other namespaces to be added.
+      </xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="wsdl:DocumentedType"/>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="ExtensibleDocumentedType" type="wsdl:ExtensibleDocumentedType">
+    <xsd:annotation>
+      <xsd:documentation>
+      This type is extended by component types to allow 
+      attributes from other namespaces to be added.
+      </xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType abstract="true" name="ExtensionElement">
+    <xsd:annotation>
+      <xsd:documentation>
+	  This abstract type is intended to serve as the base type for
+      extension elements. It includes the wsdl:required attribute
+      which it is anticipated will be used by most extension elements
+	  </xsd:documentation>
+    </xsd:annotation>
+    <xsd:choice maxOccurs="unbounded" minOccurs="0">
+      <xsd:element ref="xmi:Extension"/>
+    </xsd:choice>
+    <xsd:attribute ref="xmi:id"/>
+    <xsd:attributeGroup ref="xmi:ObjectAttribs"/>
+    <xsd:attribute name="required" type="xsd:string"/>
+  </xsd:complexType>
+  <xsd:element name="ExtensionElement" type="wsdl:ExtensionElement">
+    <xsd:annotation>
+      <xsd:documentation>
+	  This abstract type is intended to serve as the base type for
+      extension elements. It includes the wsdl:required attribute
+      which it is anticipated will be used by most extension elements
+	  </xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="ImportType">
+    <xsd:complexContent>
+      <xsd:extension base="wsdl:ExtensibleDocumentedType">
+        <xsd:attribute name="location" type="xsd:string"/>
+        <xsd:attribute name="namespace" type="xsd:string" use="required"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="ImportType" type="wsdl:ImportType"/>
+  <xsd:complexType name="IncludeType">
+    <xsd:complexContent>
+      <xsd:extension base="wsdl:ExtensibleDocumentedType">
+        <xsd:attribute name="location" type="xsd:string" use="required"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="IncludeType" type="wsdl:IncludeType"/>
+  <xsd:complexType name="InterfaceFaultType">
+    <xsd:complexContent>
+      <xsd:extension base="wsdl:ExtensibleDocumentedType">
+        <xsd:attribute name="element" type="xsd:string"/>
+        <xsd:attribute name="name" type="xsd:string" use="required"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="InterfaceFaultType" type="wsdl:InterfaceFaultType"/>
+  <xsd:complexType name="InterfaceOperationType">
+    <xsd:complexContent>
+      <xsd:extension base="wsdl:ExtensibleDocumentedType">
+        <xsd:attribute name="name" type="xsd:string" use="required"/>
+        <xsd:attribute name="pattern" type="xsd:string"/>
+        <xsd:attribute name="safe" type="xsd:string"/>
+        <xsd:attribute name="style" type="xsd:string"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="InterfaceOperationType" type="wsdl:InterfaceOperationType"/>
+  <xsd:complexType name="InterfaceType">
+    <xsd:complexContent>
+      <xsd:extension base="wsdl:ExtensibleDocumentedType">
+        <xsd:attribute name="extends" type="xsd:string"/>
+        <xsd:attribute name="name" type="xsd:string" use="required"/>
+        <xsd:attribute name="styleDefault" type="xsd:string"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="InterfaceType" type="wsdl:InterfaceType"/>
+  <xsd:complexType name="MessageRefFaultType">
+    <xsd:complexContent>
+      <xsd:extension base="wsdl:ExtensibleDocumentedType">
+        <xsd:attribute name="messageLabel" type="xsd:string"/>
+        <xsd:attribute name="ref" type="xsd:string" use="required"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="MessageRefFaultType" type="wsdl:MessageRefFaultType"/>
+  <xsd:complexType name="MessageRefType">
+    <xsd:complexContent>
+      <xsd:extension base="wsdl:ExtensibleDocumentedType">
+        <xsd:attribute name="element" type="xsd:string"/>
+        <xsd:attribute name="messageLabel" type="xsd:string"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="MessageRefType" type="wsdl:MessageRefType"/>
+  <xsd:complexType name="ServiceType">
+    <xsd:complexContent>
+      <xsd:extension base="wsdl:ExtensibleDocumentedType">
+        <xsd:attribute name="interface" type="xsd:string" use="required"/>
+        <xsd:attribute name="name" type="xsd:string" use="required"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="ServiceType" type="wsdl:ServiceType"/>
+  <xsd:complexType name="TypesType">
+    <xsd:complexContent>
+      <xsd:extension base="wsdl:ExtensibleDocumentedType"/>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="TypesType" type="wsdl:TypesType"/>
+</xsd:schema>

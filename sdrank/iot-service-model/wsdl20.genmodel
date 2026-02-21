@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/iot-wsdl/src" modelPluginID="iot-wsdl" modelName="Wsdl20"
+    rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container" importerID="org.eclipse.xsd.ecore.importer"
+    complianceLevel="5.0" copyrightFields="false" operationReflection="true" importOrganizing="true">
+  <foreignModel>file:/C:/Users/dkakunsi/Downloads/wsdl20.xsd</foreignModel>
+  <genPackages prefix="Wsdl" basePackage="org.w3.ns" resource="XML" disposableProviderFactory="true"
+      ecorePackage="wsdl.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="wsdl.ecore#//ElementReferenceTypeMember1">
+      <genEnumLiterals ecoreEnumLiteral="wsdl.ecore#//ElementReferenceTypeMember1/any"/>
+      <genEnumLiterals ecoreEnumLiteral="wsdl.ecore#//ElementReferenceTypeMember1/none"/>
+      <genEnumLiterals ecoreEnumLiteral="wsdl.ecore#//ElementReferenceTypeMember1/other"/>
+    </genEnums>
+    <genDataTypes ecoreDataType="wsdl.ecore#//ElementReferenceType"/>
+    <genDataTypes ecoreDataType="wsdl.ecore#//ElementReferenceTypeMember1Object"/>
+    <genDataTypes ecoreDataType="wsdl.ecore#//ExtendsType"/>
+    <genDataTypes ecoreDataType="wsdl.ecore#//StyleDefaultType"/>
+    <genClasses ecoreClass="wsdl.ecore#//BindingFaultType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute wsdl.ecore#//BindingFaultType/group"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EAttribute wsdl.ecore#//BindingFaultType/any"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wsdl.ecore#//BindingFaultType/ref"/>
+    </genClasses>
+    <genClasses ecoreClass="wsdl.ecore#//BindingOperationFaultType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute wsdl.ecore#//BindingOperationFaultType/group"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EAttribute wsdl.ecore#//BindingOperationFaultType/any"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wsdl.ecore#//BindingOperationFaultType/messageLabel"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wsdl.ecore#//BindingOperationFaultType/ref"/>
+    </genClasses>
+    <genClasses ecoreClass="wsdl.ecore#//BindingOperationMessageType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute wsdl.ecore#//BindingOperationMessageType/group"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EAttribute wsdl.ecore#//BindingOperationMessageType/any"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wsdl.ecore#//BindingOperationMessageType/messageLabel"/>
+    </genClasses>
+    <genClasses ecoreClass="wsdl.ecore#//BindingOperationType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute wsdl.ecore#//BindingOperationType/group"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference wsdl.ecore#//BindingOperationType/input"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference wsdl.ecore#//BindingOperationType/output"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference wsdl.ecore#//BindingOperationType/infault"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference wsdl.ecore#//BindingOperationType/outfault"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EAttribute wsdl.ecore#//BindingOperationType/any"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wsdl.ecore#//BindingOperationType/ref"/>
+    </genClasses>
+    <genClasses ecoreClass="wsdl.ecore#//BindingType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute wsdl.ecore#//BindingType/group"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference wsdl.ecore#//BindingType/operation"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference wsdl.ecore#//BindingType/fault"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EAttribute wsdl.ecore#//BindingType/any"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wsdl.ecore#//BindingType/interface"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wsdl.ecore#//BindingType/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wsdl.ecore#//BindingType/type"/>
+    </genClasses>
+    <genClasses ecoreClass="wsdl.ecore#//DescriptionType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute wsdl.ecore#//DescriptionType/group"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference wsdl.ecore#//DescriptionType/import"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference wsdl.ecore#//DescriptionType/include"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference wsdl.ecore#//DescriptionType/types"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference wsdl.ecore#//DescriptionType/interface"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference wsdl.ecore#//DescriptionType/binding"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference wsdl.ecore#//DescriptionType/service"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EAttribute wsdl.ecore#//DescriptionType/any"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wsdl.ecore#//DescriptionType/targetNamespace"/>
+    </genClasses>
+    <genClasses ecoreClass="wsdl.ecore#//DocumentationType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute wsdl.ecore#//DocumentationType/mixed"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EAttribute wsdl.ecore#//DocumentationType/any"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute wsdl.ecore#//DocumentationType/anyAttribute"/>
+    </genClasses>
+    <genClasses ecoreClass="wsdl.ecore#//DocumentedType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference wsdl.ecore#//DocumentedType/documentation"/>
+    </genClasses>
+    <genClasses ecoreClass="wsdl.ecore#//DocumentRoot">
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EAttribute wsdl.ecore#//DocumentRoot/mixed"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference wsdl.ecore#//DocumentRoot/xMLNSPrefixMap"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference wsdl.ecore#//DocumentRoot/xSISchemaLocation"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference wsdl.ecore#//DocumentRoot/binding"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference wsdl.ecore#//DocumentRoot/description"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference wsdl.ecore#//DocumentRoot/documentation"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference wsdl.ecore#//DocumentRoot/endpoint"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference wsdl.ecore#//DocumentRoot/import"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference wsdl.ecore#//DocumentRoot/include"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference wsdl.ecore#//DocumentRoot/interface"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference wsdl.ecore#//DocumentRoot/service"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference wsdl.ecore#//DocumentRoot/types"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wsdl.ecore#//DocumentRoot/required"/>
+    </genClasses>
+    <genClasses ecoreClass="wsdl.ecore#//EndpointType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute wsdl.ecore#//EndpointType/group"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EAttribute wsdl.ecore#//EndpointType/any"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wsdl.ecore#//EndpointType/address"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wsdl.ecore#//EndpointType/binding"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wsdl.ecore#//EndpointType/name"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="wsdl.ecore#//ExtensibleDocumentedType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute wsdl.ecore#//ExtensibleDocumentedType/anyAttribute"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="wsdl.ecore#//ExtensionElement">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wsdl.ecore#//ExtensionElement/required"/>
+    </genClasses>
+    <genClasses ecoreClass="wsdl.ecore#//ImportType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute wsdl.ecore#//ImportType/any"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wsdl.ecore#//ImportType/location"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wsdl.ecore#//ImportType/namespace"/>
+    </genClasses>
+    <genClasses ecoreClass="wsdl.ecore#//IncludeType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute wsdl.ecore#//IncludeType/any"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wsdl.ecore#//IncludeType/location"/>
+    </genClasses>
+    <genClasses ecoreClass="wsdl.ecore#//InterfaceFaultType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute wsdl.ecore#//InterfaceFaultType/group"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EAttribute wsdl.ecore#//InterfaceFaultType/any"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wsdl.ecore#//InterfaceFaultType/element"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wsdl.ecore#//InterfaceFaultType/name"/>
+    </genClasses>
+    <genClasses ecoreClass="wsdl.ecore#//InterfaceOperationType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute wsdl.ecore#//InterfaceOperationType/group"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference wsdl.ecore#//InterfaceOperationType/input"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference wsdl.ecore#//InterfaceOperationType/output"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference wsdl.ecore#//InterfaceOperationType/infault"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference wsdl.ecore#//InterfaceOperationType/outfault"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EAttribute wsdl.ecore#//InterfaceOperationType/any"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wsdl.ecore#//InterfaceOperationType/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wsdl.ecore#//InterfaceOperationType/pattern"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wsdl.ecore#//InterfaceOperationType/safe"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wsdl.ecore#//InterfaceOperationType/style"/>
+    </genClasses>
+    <genClasses ecoreClass="wsdl.ecore#//InterfaceType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute wsdl.ecore#//InterfaceType/group"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference wsdl.ecore#//InterfaceType/operation"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference wsdl.ecore#//InterfaceType/fault"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EAttribute wsdl.ecore#//InterfaceType/any"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wsdl.ecore#//InterfaceType/extends"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wsdl.ecore#//InterfaceType/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wsdl.ecore#//InterfaceType/styleDefault"/>
+    </genClasses>
+    <genClasses ecoreClass="wsdl.ecore#//MessageRefFaultType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute wsdl.ecore#//MessageRefFaultType/group"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EAttribute wsdl.ecore#//MessageRefFaultType/any"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wsdl.ecore#//MessageRefFaultType/messageLabel"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wsdl.ecore#//MessageRefFaultType/ref"/>
+    </genClasses>
+    <genClasses ecoreClass="wsdl.ecore#//MessageRefType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute wsdl.ecore#//MessageRefType/group"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EAttribute wsdl.ecore#//MessageRefType/any"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wsdl.ecore#//MessageRefType/element"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wsdl.ecore#//MessageRefType/messageLabel"/>
+    </genClasses>
+    <genClasses ecoreClass="wsdl.ecore#//ServiceType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute wsdl.ecore#//ServiceType/group"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference wsdl.ecore#//ServiceType/endpoint"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EAttribute wsdl.ecore#//ServiceType/any"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wsdl.ecore#//ServiceType/interface"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wsdl.ecore#//ServiceType/name"/>
+    </genClasses>
+    <genClasses ecoreClass="wsdl.ecore#//TypesType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute wsdl.ecore#//TypesType/any"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<xsd:schema xmlns:iot="http://itb.ac.id/wsdl/iot-wsdl" xmlns:wsdl="http://www.w3.org/ns/wsdl" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://itb.ac.id/wsdl/iot-wsdl">
+  <xsd:import namespace="http://www.omg.org/XMI" schemaLocation="platform:/plugin/org.eclipse.emf.ecore/model/XMI.xsd"/>
+  <xsd:import namespace="http://www.w3.org/ns/wsdl" schemaLocation="wsdl.xsd"/>
+  <xsd:complexType name="DeviceDescription">
+    <xsd:complexContent>
+      <xsd:extension base="wsdl:DescriptionType">
+        <xsd:choice maxOccurs="unbounded" minOccurs="0">
+          <xsd:element name="qualityOfDevice" type="iot:QualityOfDevice"/>
+          <xsd:element name="availableTime" type="iot:TimeRange"/>
+        </xsd:choice>
+        <xsd:attribute name="deviceId" type="xsd:string" use="required"/>
+        <xsd:attribute name="deviceName" type="xsd:string" use="required"/>
+        <xsd:attribute name="deviceOwner" type="xsd:string" use="required"/>
+        <xsd:attribute name="ownerHomepage" type="xsd:string"/>
+        <xsd:attribute name="latitude" type="xsd:string" use="required"/>
+        <xsd:attribute name="longitude" type="xsd:string" use="required"/>
+        <xsd:attribute name="qualityOfDevice" type="xsd:string"/>
+        <xsd:attribute name="availableTime" type="xsd:string"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="DeviceDescription" type="iot:DeviceDescription"/>
+  <xsd:complexType name="IoTEndpoint">
+    <xsd:complexContent>
+      <xsd:extension base="wsdl:EndpointType">
+        <xsd:attribute name="price" type="xsd:string"/>
+        <xsd:attribute name="curreny" type="xsd:string"/>
+        <xsd:attribute name="token" type="xsd:string"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="IoTEndpoint" type="iot:IoTEndpoint"/>
+  <xsd:complexType name="ResourceInterface">
+    <xsd:complexContent>
+      <xsd:extension base="wsdl:InterfaceType">
+        <xsd:attribute name="resourceType" type="xsd:string" use="required"/>
+        <xsd:attribute name="resourceRange" type="xsd:string" use="required"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="ResourceInterface" type="iot:ResourceInterface"/>
+  <xsd:complexType name="ProcessingTime">
+    <xsd:complexContent>
+      <xsd:extension base="iot:QualityOfDevice"/>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="ProcessingTime" type="iot:ProcessingTime"/>
+  <xsd:complexType abstract="true" name="QualityOfDevice">
+    <xsd:choice maxOccurs="unbounded" minOccurs="0">
+      <xsd:element ref="xmi:Extension"/>
+    </xsd:choice>
+    <xsd:attribute ref="xmi:id"/>
+    <xsd:attributeGroup ref="xmi:ObjectAttribs"/>
+    <xsd:attribute name="unit" type="xsd:string" use="required"/>
+    <xsd:attribute name="value" type="xsd:string" use="required"/>
+  </xsd:complexType>
+  <xsd:element name="QualityOfDevice" type="iot:QualityOfDevice"/>
+  <xsd:complexType name="Precision">
+    <xsd:complexContent>
+      <xsd:extension base="iot:QualityOfDevice"/>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="Precision" type="iot:Precision"/>
+  <xsd:complexType name="Reliability">
+    <xsd:complexContent>
+      <xsd:extension base="iot:QualityOfDevice"/>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="Reliability" type="iot:Reliability"/>
+  <xsd:complexType name="DataRate">
+    <xsd:complexContent>
+      <xsd:extension base="iot:QualityOfDevice"/>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="DataRate" type="iot:DataRate"/>
+  <xsd:complexType name="TimeRange">
+    <xsd:choice maxOccurs="unbounded" minOccurs="0">
+      <xsd:element ref="xmi:Extension"/>
+    </xsd:choice>
+    <xsd:attribute ref="xmi:id"/>
+    <xsd:attributeGroup ref="xmi:ObjectAttribs"/>
+    <xsd:attribute name="begin" type="xsd:string" use="required"/>
+    <xsd:attribute name="end" type="xsd:string" use="required"/>
+  </xsd:complexType>
+  <xsd:element name="TimeRange" type="iot:TimeRange"/>
+</xsd:schema>

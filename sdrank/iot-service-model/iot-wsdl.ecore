@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="iot_wsdl" nsURI="http://itb.ac.id/wsdl/iot-wsdl" nsPrefix="iot">
+  <eClassifiers xsi:type="ecore:EClass" name="DeviceDescription" eSuperTypes="wsdl.ecore#//DescriptionType">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="qualityOfDevice" lowerBound="1"
+        upperBound="-1" eType="#//QualityOfDevice"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="deviceId" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//String" iD="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="deviceName" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//String"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="deviceOwner" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//String"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="ownerHomepage" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//String"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="latitude" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Double"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="longitude" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Double"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="availableTime" lowerBound="1"
+        upperBound="-1" eType="#//TimeRange"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="IoTEndpoint" eSuperTypes="wsdl.ecore#//EndpointType">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="price" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Long"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="curreny" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//String"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="token" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//String"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ResourceInterface" eSuperTypes="wsdl.ecore#//InterfaceType">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="resourceType" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//NCName"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="resourceRange" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Float"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ProcessingTime" eSuperTypes="#//QualityOfDevice"/>
+  <eClassifiers xsi:type="ecore:EClass" name="QualityOfDevice" abstract="true">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="unit" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//String"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Float"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Precision" eSuperTypes="#//QualityOfDevice"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Reliability" eSuperTypes="#//QualityOfDevice"/>
+  <eClassifiers xsi:type="ecore:EClass" name="DataRate" eSuperTypes="#//QualityOfDevice"/>
+  <eClassifiers xsi:type="ecore:EClass" name="TimeRange">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="begin" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Time"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="end" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Time"/>
+  </eClassifiers>
+</ecore:EPackage>
