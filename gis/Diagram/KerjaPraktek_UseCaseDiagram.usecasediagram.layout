@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<useCaseDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="KerjaPraktek_UseCaseDiagram">
+  <useCaseModelRootMoniker Id="4f282845-08e3-46ec-8f34-86af90129030" />
+  <nestedChildShapes>
+    <actorShape Id="34b7a896-c417-448e-8e08-0434494dc362" absoluteBounds="2, 2.375, 0.5, 0.5" isReference="false" heightOffset="0">
+      <actorMoniker Id="23fddd76-67ec-484e-97e4-f6c94a26e19f" LastKnownName="Operator" />
+      <relativeChildShapes />
+    </actorShape>
+    <actorShape Id="a6ccf5cd-6d95-470d-bbd2-34d72030da74" absoluteBounds="2, 4.625, 0.5, 0.5" isReference="false" heightOffset="0">
+      <actorMoniker Id="cfb13b56-f2bb-456a-8b39-ca5950376a16" LastKnownName="User" />
+      <relativeChildShapes />
+    </actorShape>
+    <useCaseShape Id="2582112d-9db7-4ff5-8ec2-32b3d2e957d8" absoluteBounds="5.375, 2, 1, 0.5" customColor="238, 237, 131" heightOffset="0">
+      <useCaseMoniker Id="633aea2c-498e-451f-9911-adfd52064e8d" LastKnownName="Login" />
+      <relativeChildShapes />
+    </useCaseShape>
+    <useCaseShape Id="c9ecc212-6ba3-4fd1-b88f-0a656085febe" absoluteBounds="4.75, 3.5, 1, 0.5" customColor="238, 237, 131" heightOffset="0">
+      <useCaseMoniker Id="c05f5f6e-95b0-4ae1-8403-43c951212e3d" LastKnownName="Cari Peta" />
+      <relativeChildShapes />
+    </useCaseShape>
+    <useCaseShape Id="54d07a2a-8ea5-482a-b8b3-c279bc271d37" absoluteBounds="6.875, 1.375, 1.25, 0.5" customColor="238, 237, 131" heightOffset="0">
+      <useCaseMoniker Id="47155de7-6f73-438b-acc9-da56f999bf5d" LastKnownName="Tambah Data" />
+      <relativeChildShapes />
+    </useCaseShape>
+    <useCaseShape Id="2df66319-94b9-4889-82f2-b5c940ed60ad" absoluteBounds="8.25, 1.75, 1, 0.5" customColor="238, 237, 131" heightOffset="0">
+      <useCaseMoniker Id="14b727b8-3394-451a-8da5-e214735dae4b" LastKnownName="Ubah Data" />
+      <relativeChildShapes />
+    </useCaseShape>
+    <useCaseShape Id="c0440f45-7e9e-4b01-861c-7ea3b78e9f17" absoluteBounds="8.375, 2.5, 1, 0.5" customColor="238, 237, 131" heightOffset="0">
+      <useCaseMoniker Id="08ec3e38-40a9-42ed-b174-8bcd39b40f4a" LastKnownName="Hapus Data" />
+      <relativeChildShapes />
+    </useCaseShape>
+    <rectangleShape Id="6a336add-68d4-4257-a948-d8b8cc9167c9" absoluteBounds="4.5, 1.25, 5.5, 5.125" outlineColor="83, 134, 191" outlineThickness="0.03125" />
+  </nestedChildShapes>
+</useCaseDiagram>

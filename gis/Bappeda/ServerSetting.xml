@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<Config>
+  <Server>
+    <Address>LAB-TIK</Address>
+    <Username>ADMIN</Username>
+    <Password>²-³</Password>
+  </Server>
+  <Database>
+    <Name>BAPPEDA</Name>
+    <Username>bappeda</Username>
+    <Password>1234</Password>
+  </Database>
+</Config>

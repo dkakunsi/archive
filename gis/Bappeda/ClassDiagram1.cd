@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="dkakunsi.bappeda.adapter.Adapter">
+    <Position X="0.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAQAAAWYAgAAQAAAAAAAAAAAAQAAABAAAAAAAIAAAA=</HashCode>
+      <FileName>Adapter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="dkakunsi.bappeda.adapter.AsetAdapter">
+    <Position X="2.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAASIAgAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAA=</HashCode>
+      <FileName>Adapter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="dkakunsi.bappeda.adapter.PetaAdapter">
+    <Position X="4" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAASIAgAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAA=</HashCode>
+      <FileName>Adapter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="dkakunsi.bappeda.adapter.LoginAdapter">
+    <Position X="5.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAASIAgAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAA=</HashCode>
+      <FileName>Adapter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="dkakunsi.bappeda.util.ServerSetting" Collapsed="true">
+    <Position X="12.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAAAAAAAAAAAACRCAAIAAAABQgAgAAASMAAABEAAA=</HashCode>
+      <FileName>BappedaUtil.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="dkakunsi.bappeda.util.ConnectionManager">
+    <Position X="7" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAAEAAAAEAAQABAAAAAAAAAAACAIAAAgAAAAA=</HashCode>
+      <FileName>BappedaUtil.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="dkakunsi.bappeda.util.BappedaException" Collapsed="true">
+    <Position X="12.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BappedaUtil.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="dkakunsi.bappeda.entity.AsetJalanModel" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="11" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAEAAAMAAAAAAAAAAAACBAAAAAAAAAAACAAAA=</HashCode>
+      <FileName>Entity.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="dkakunsi.bappeda.entity.PetaModel" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="9.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAIAAAIAAAAAAAAAAAAAAAkAAAAAAgAAAAI=</HashCode>
+      <FileName>Entity.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="dkakunsi.bappeda.entity.LoginModel" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="11" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAgAAAAAAAAQAAAAAAAAAAAAACAAAAAAAAAAA=</HashCode>
+      <FileName>Entity.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="dkakunsi.bappeda.util.report.MyReport" Collapsed="true">
+    <Position X="12.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAAAAAQAAQAAAAAAAAAAAAA=</HashCode>
+      <FileName>Report.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="dkakunsi.Report" Collapsed="true">
+    <Position X="11" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAwAAAAJABAAAQAAAAAgCQBgAAAAAAAEABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="dkakunsi.bappeda.accessor.IDataModel">
+    <Position X="2.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Accessor.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="dkakunsi.bappeda.accessor.IAsetJalanModel">
+    <Position X="0.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAEAAAMAAAAAAAAAAAACBAAAAAAAAAAACAAAA=</HashCode>
+      <FileName>Accessor.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="dkakunsi.bappeda.accessor.IPetaModel">
+    <Position X="2.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAIAAAIAAAAAAAAAAAAAAAEAAAAAAgAAAAA=</HashCode>
+      <FileName>Accessor.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="dkakunsi.bappeda.accessor.ILoginModel">
+    <Position X="5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAgAAAAAAAAQAAAAAAAAAAAAACAAAAAAAAAAA=</HashCode>
+      <FileName>Accessor.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

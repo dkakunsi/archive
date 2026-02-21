@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="dkakunsi.bappeda.client.ViewGenerator" Collapsed="true">
+    <Position X="13.75" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAAACAAAAAgAAAAAAAAAAAAAAAAIAAAACAAAAgA=</HashCode>
+      <FileName>ClientUtil.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="dkakunsi.bappeda.client.Controller">
+    <Position X="12" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAQIBgAAAAAAAAAAAAAAACAAQAEAAAQBAAAAAA=</HashCode>
+      <FileName>ClientUtil.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="dkakunsi.bappeda.client.FormData" Collapsed="true">
+    <Position X="2.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAUACShAyBkAhACgACCEEADCQAAAQC0gCAEIAAEBAE=</HashCode>
+      <FileName>FormData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="dkakunsi.bappeda.client.FormLogin">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAAAAAACAAABEAAACAAEBCIAAACAAAADAAAQBAAAA=</HashCode>
+      <FileName>FormLogin.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="dkakunsi.bappeda.client.FormPengaturan" Collapsed="true">
+    <Position X="2.5" Y="0.5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>8xwKRAACQCMAyhAgCkeCMgkWsAkQBThEADAkAkAAAAE=</HashCode>
+      <FileName>FormPengaturan.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="dkakunsi.bappeda.client.FormReport" Collapsed="true">
+    <Position X="2.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAkAAAAAACAAAAKAAQAAQAAECAAIRAAAAA=</HashCode>
+      <FileName>FormReport.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="dkakunsi.bappeda.client.FormSplash" Collapsed="true">
+    <Position X="13.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACggABAAQACAAAACQAAAAAAAAAAAAQgAAAA=</HashCode>
+      <FileName>FormSplash.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="dkakunsi.bappeda.client.FormUtama" Collapsed="true">
+    <Position X="4.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAgAIBACAEBZAEAACCAAgD4DGADgAACCEAMSBABEA=</HashCode>
+      <FileName>FormUtama.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="dkakunsi.bappeda.client.Program" Collapsed="true">
+    <Position X="11.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Bappeda.Properties.Resources" Collapsed="true">
+    <Position X="11.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAABEAAAAQAAAAAAAAAAAAAAAIA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Bappeda.Properties.Settings" Collapsed="true">
+    <Position X="11.5" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="4f282845-08e3-46ec-8f34-86af90129030" name="KerjaPraktek_UseCaseDiagram" linkedPackageId="6ba388ea-6835-472d-a637-172b8e15df4a" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
+  <packagedElements>
+    <useCaseModelRootHasTypes>
+      <actor Id="23fddd76-67ec-484e-97e4-f6c94a26e19f" name="Operator" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="fa4562d4-2bc0-4524-9e20-0db8e698d290" />
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <actor Id="cfb13b56-f2bb-456a-8b39-ca5950376a16" name="User" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="71ea1df7-c525-4cd9-bde4-5d651b67aba7" />
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="633aea2c-498e-451f-9911-adfd52064e8d" name="Login" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="bf3346b1-e2ff-41a9-bfcf-a930f8c01da0" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="c05f5f6e-95b0-4ae1-8403-43c951212e3d" name="Cari Peta" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="04f60673-3c0f-4043-9be9-ac0dd9bb29d2" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="47155de7-6f73-438b-acc9-da56f999bf5d" name="Tambah Data" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="322df405-6e25-4127-bbaa-acb46bfe89ae" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="14b727b8-3394-451a-8da5-e214735dae4b" name="Ubah Data" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="f659cd0e-03bb-4a2f-9675-f1725bc5882d" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="08ec3e38-40a9-42ed-b174-8bcd39b40f4a" name="Hapus Data" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="422931b9-433e-49b5-ab25-382987e3a92a" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+  </packagedElements>
+  <package Id="6ba388ea-6835-472d-a637-172b8e15df4a" name="Diagram">
+    <elementDefinition Id="afd93b87-e58c-4bbd-8037-4fdc8aa885b7" />
+    <profileInstances>
+      <packageHasProfileInstances Id="68927370-9b06-40ad-9280-d2c1caf3133b">
+        <profileInstance Id="33aa6d0f-66bb-48a7-9de5-15eef4308377" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="00bbf531-16ea-400a-a929-3418c5d89fe5">
+        <profileInstance Id="0601f416-274f-45e8-80a6-053ea9039945" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+    </profileInstances>
+  </package>
+</useCaseModelRoot>
