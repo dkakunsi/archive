@@ -1,0 +1,33 @@
+@charset "utf-8";
+/* CSS Document */
+
+body	{ font-family:Verdana, Arial, Helvetica, sans-serif; background-color:#00bfff;}
+a		{ text-decoration:none;}
+tr		{}
+th		{ background-color:#999999; }
+td		{}
+
+div#logo		{ background-color:#ffffff; width:175px; height:150px; }
+div#header		{ background-color:#999999; font-size:43px; height:50px; width:1200px; margin-left: 176px; margin-top: -193px; }
+div#container	{ margin-left:0px; margin-top:102px;}
+  div#tools		{ background-color:#dddddd; margin-top:10px; margin-left:0px; width:175px; height:310px;}
+    div#search	{ }
+	  div#searchDepartment	{ }
+	  div#searchNip	{ }
+	  div#searchTanggal	{ }
+    div#kelola	{ }
+	  div#addButton	{ }
+    div#nav			{ }
+  div#table		{ margin-top:-400px; margin-left:175px; width:1110px;}
+div#footer		{ margin-top:0px;}
+  div#background{ width:10px; height: 10px; margin-left:450px; margin-top: 10px; }
+div#login		{ margin-top:200px;}
+div#judul1		{ background-color:#555555;}
+div#judul2		{ background-color:#999999;}
+
+.button	{ text-decoration:none; color:BLUE; text-align:center;}
+.button:visited	{ color:BLUE}
+.button:hover	{ color:red;font-weight:bold;}
+.search	{}
+.action	{}
+.action:hover	{ background-color:#FFFFFF;}

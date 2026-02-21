@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:jaxws="http://cxf.apache.org/jaxws"
+	xsi:schemaLocation="
+		http://www.springframework.org/schema/beans
+		http://www.springframework.org/schema/beans/spring-beans-3.2.xsd
+		http://www.springframework.org/schema/context
+		http://www.springframework.org/schema/context/spring-context-3.2.xsd
+		http://www.springframework.org/schema/tx
+		http://www.springframework.org/schema/tx/spring-tx-3.2.xsd
+		http://cxf.apache.org/jaxws
+		http://cxf.apache.org/schemas/jaxws.xsd">
+
+	<context:component-scan base-package="edu.dkakunsi.ta.presensi"/>
+	<context:annotation-config/>
+	<tx:annotation-driven/>
+	
+	<import resource="classpath:META-INF/cxf/cxf.xml" />
+	<import resource="classpath:META-INF/cxf/cxf-extension-soap.xml" />
+	<import resource="classpath:META-INF/cxf/cxf-servlet.xml" />
+
+	<bean id="dataSource"
+		class="org.springframework.jdbc.datasource.DriverManagerDataSource"
+		p:driverClassName="com.mysql.jdbc.Driver"
+		p:url="jdbc:mysql://mysql-dkakunsi.jelastic.servint.net:3306/presensi"
+		p:username="root"
+		p:password="got1kckfrl"/>
+	 
+	<!-- Debug on localhost -->
+	<!--
+	<bean id="dataSource"
+		class="org.springframework.jdbc.datasource.DriverManagerDataSource"
+		p:driverClassName="com.mysql.jdbc.Driver"
+		p:url="jdbc:mysql://localhost:3306/presensi"
+		p:username="tugas_akhir"
+		p:password="12345"/>
+	-->
+	
+	<bean id="sessionFactory"
+		class="org.springframework.orm.hibernate4.LocalSessionFactoryBean"
+		p:dataSource-ref="dataSource"
+		p:configLocation="classpath:hibernate.cfg.xml"/>
+
+	<bean id="transactionManager"
+		class="org.springframework.orm.hibernate4.HibernateTransactionManager"
+		p:sessionFactory-ref="sessionFactory"/>
+
+	<jaxws:endpoint id="departmentWS"
+		implementor="edu.dkakunsi.ta.presensi.web.service.impl.DepartmentWs"
+		address="/DepartmentService" />
+
+	<jaxws:endpoint id="pegawaiWS"
+		implementor="edu.dkakunsi.ta.presensi.web.service.impl.PegawaiWs"
+		address="/PegawaiService" />
+
+	<jaxws:endpoint id="presensiWS"
+		implementor="edu.dkakunsi.ta.presensi.web.service.impl.PresensiWs"
+		address="/PresensiService" />
+
+	<jaxws:endpoint id="izinWS"
+		implementor="edu.dkakunsi.ta.presensi.web.service.impl.IzinWs"
+		address="/IzinService" />
+
+	<jaxws:endpoint id="lemburWS"
+		implementor="edu.dkakunsi.ta.presensi.web.service.impl.LemburWs"
+		address="/LemburService" />
+</beans>
