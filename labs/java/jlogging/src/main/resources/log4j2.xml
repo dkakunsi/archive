@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<Configuration packages="id.dkakunsi.lab.jlogging" name="jlogging">
+    <Appenders>
+        <Console name="CONSOLE" target="SYSTEM_OUT">
+            <CustomJsonLayout
+                isRecursiveStackTrace="false"
+                attributes="timestamp,correlationId,tid,principal,host,service,instance,version,thread,category,level,message,fault,stacktrace,payload" />
+        </Console>
+    </Appenders>
+    <Loggers>
+        <Root level="INFO">
+            <AppenderRef ref="CONSOLE" level="INFO" />
+        </Root>
+    </Loggers>
+</Configuration>
