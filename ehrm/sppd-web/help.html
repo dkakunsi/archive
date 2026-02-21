@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="images/favicon.png">
+    
+    <!-- UnitedVision's CSS -->
+	<link rel="stylesheet" href="css/unitedvision-site.css">
+
+    <!-- Bootstrap's CSS -->
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/datepicker.css">
+	<link rel="stylesheet" href="css/dashboard.css">
+	<link rel="stylesheet" href="css/google-font.css">
+	
+    <title>eSPPD | Pemerintah Kabupaten Kepulauan Sangihe</title>
+  </head>
+  <body>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container-fluid">
+
+        <div class="navbar-header col-md-4">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a id="link-sangihe" class="navbar-brand" data-toggle="tooltip" data-placement="right" title="Aplikasi e-Human Resource Management">e-Human Resource Management</a>
+        </div>
+
+		<!-- Navigation -->
+        <div id="navigation-panel" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a id="nav-home" href="index.html">Home</a></li>
+          </ul>
+        </div><!-- Navigation -->
+		
+      </div> <!-- container-fluid -->
+    </nav>
+
+    <div class="container-fluid">
+      <div class="row">
+		<!-- sidebar menu -->
+        <div id="menu-panel" class="col-sm-3 col-md-3 sidebar">
+          <ul class="nav nav-sidebar">
+			<li><a href="#" onclick="showDivWithClass('help-spt-tambah', 'content')"><span class="glyphicon glyphicon-home big-icon"></span><b class="icon-text">Tambah SPT</b></a></li>
+			<li><a href="#" onclick="showDivWithClass('help-spt-pemegang', 'content')"><span class="glyphicon glyphicon-home big-icon"></span><b class="icon-text">Tambah Pemegang SPT</b></a></li>
+			<li><a href="#" onclick="showDivWithClass('help-sppd-tambah', 'content')"><span class="glyphicon glyphicon-home big-icon"></span><b class="icon-text">Tambah SPPD</b></a></li>
+		  </ul>
+        </div>
+		<!-- end of sidebar -->
+
+        <div class="col-sm-9 col-sm-offset-4 col-md-9 col-md-offset-3 main">
+		  <div id="help-spt-tambah" class="content">
+			<h3>Menambah Data SPT</h3>
+			<br />
+			<ol>
+				<li>
+					Klik tombol <b>Tambah</b> pada menu SPT untuk menambah data SPT.
+					<img src="images/help/spt/tambah.jpg" class="img-responsive" alt="Menambah Data SPT" />
+					<br />
+				</li>
+				<li>
+					Masukkan data SPT sesuai dengan form yang disediakan. Setelah berhasil menyimpan data SPT, data tersebut akan ditampilkan pada tabel.
+					<img src="images/help/spt/data.jpg" class="img-responsive" alt="Menambah Data SPT" />
+					<br />
+				</li>
+				<li>
+					Klik <b>Simpan</b>.
+					<br />
+				</li>
+			</ol>
+		  </div>
+		  <div id="help-spt-pemegang" class="content">
+			<h3>Menambah Pemegang SPT</h3>
+			<div class="alert alert-warning" role="alert">
+				Catatan: Setiap pegawai yang akan mengurus SPPD menggunakan SPT harus ditambah. Jika tidak, tidak dapat membuat SPPD.
+			</div>
+			<br />
+			<ol>
+				<li>
+					Pilih salah satu data SPT dari tabel, dan pilih <b>Tambah Pegawai</b> pada pilihan untuk menambah pegawai yang menggunakan SPT tersebut.
+					<img src="images/help/spt/pegawai.jpg" class="img-responsive" alt="Menambah Data SPT" />
+					<br />
+				</li>
+				<li>
+					Masukkan NIP Pegawai yang menggunakan SPT tersebut.
+					<img src="images/help/spt/nip.jpg" class="img-responsive" alt="Menambah Data SPT" />
+					<br />
+				</li>
+				<li>
+					Klik <b>Simpan</b>.
+					<br />
+				</li>
+			</ol>
+		  </div>
+		  <div id="help-sppd-tambah" class="content">
+			<h3>Menambah Data SPPD</h3>
+			<div class="alert alert-warning" role="alert">
+				<h5>Catatan:</h5>
+				<ul>
+					<li>Sebelum menambah SPPD, pastikan anda telah mengisi SPT yang akan digunakan pada SPPD.</li>
+					<li>Pastikan pegawai yang akan diinput, sudah termasuk dalam pemegang tugas SPT tersebut.</li>
+				</ul>
+			</div>
+			<br />
+			<ol>
+				<li>
+					Klik tombol <b>Tambah</b> pada menu SPPD untuk menambah data SPPD.
+					<img src="images/help/sppd/tambah.jpg" class="img-responsive" alt="Menambah Data SPT" />
+					<br />
+				</li>
+				<li>
+					Masukkan data SPPD sesuai dengan form yang disediakan. Setelah berhasil menyimpan data SPPD, data tersebut akan ditampilkan pada tabel.
+					<img src="images/help/sppd/data.png" class="img-responsive" alt="Menambah Data SPT" />
+					<br />
+				</li>
+				<li>
+					Klik <b>Simpan</b>.
+					<br />
+				</li>
+			</ol>
+		  </div>
+        </div>
+      </div> <!-- row -->
+    </div> <!-- container-fluid -->
+
+	<!-- Required Library -->	
+	<!-- jQuery Library -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/common.js"></script>
+
+    <!-- Bootstrap's JS -->
+    <script src="js/bootstrap.min.js"></script>
+	<script src="js/bootstrap-datepicker.js"></script>
+	<script src="js/bootstrap-select.min.js"></script>
+	<script src="js/tooltip.js"></script>
+
+  </body>
+</html>

@@ -1,0 +1,214 @@
+html, body, h1, h2, h3, h4, ul, li {
+	margin: 0;
+	padding: 0;
+}
+h1 img {
+	display: block;
+}
+img {
+	border: 0;
+}
+.left {
+	float: left;
+}
+.right {
+	float: right;
+}
+.more {
+	text-align: right;
+}
+.clear {
+	clear: both;
+}
+
+body {
+	background: #3A0404 url(../images/page_bg.jpg) repeat-x;
+	/** background-color: #800; **/
+	font: 15px arial, sans-serif;
+	color: #464544;
+	padding-bottom: 10px;
+}
+
+h1 {
+  padding: 15px 0 0 0px;
+  font: 32px "arial black", arial, sans-serif;
+  color: #151515;
+}
+
+h1 em {
+  color: #ffffff;
+  font-weight: bold;
+  font-style: normal;
+  position: relative;
+  top: -4px;
+}
+
+.nav {
+  color: #FFFFFF;
+  font-size: 20px;
+  font-weight: bold;
+  text-decoration: none;
+  display: block;
+  padding-top: 25px;
+  line-height: 1.1;
+}
+
+a.nav:hover {
+	color: #FFA405;
+}
+
+.clock {
+  font-size: 30px;
+}
+
+#header {
+	/* something here */
+}
+
+#logo {
+  height: 100px;
+}
+
+#image-hrm {
+	position: absolute;
+	width:400px;
+	height:120px; 
+	top: -20px;
+	left: 0px;
+}
+
+#foto {
+  position: relative;
+  left: 0px;
+  top: 20px;
+  min-height: 200px;
+  _height: 200px;
+  background: url(../images/foto.jpg) no-repeat;
+}
+
+#running-text {
+	color: #fff;
+}
+
+#rss {
+	font-size: 14px;
+	font-size: 20px;
+	text-align: justify;
+	width: 100%;
+	height: 200px;
+}
+
+#clock {
+	width: 100%;
+	height: 100%;
+	background-color: #800;
+}
+
+#digital-clock {
+	background-color: #000;
+	border: #999 2px inset;
+	padding: 6px;
+	color: #0FF;
+	font-family: "Arial Black", Gadget, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+	letter-spacing: 2px;
+	display: inline;
+}
+
+/** Body **/
+#content {
+  width: 1200px;
+  position: absolute;
+  color: #fff;
+  top: 299px;
+  left: 33px;
+}
+#content a {
+  color: #fff;
+}
+#content a:hover {
+  color: #fee;
+}
+#body {
+  border: 3px solid white;
+  background: #901315;
+  padding: 18px;
+}
+
+p.more {
+  margin: 0;
+}
+
+#body h2 {
+  font-size: 12px;
+  text-align: right;
+  margin-bottom: 1.5em;
+}
+#body h3 {
+  font-size: 9px;
+  color: #FFEA00;
+}
+#body .more a {
+  font-weight: bold;
+  text-decoration: none;
+}
+#body .more a:hover {
+  text-decoration: underline;
+}
+#body .hr-yellow {
+  border-top: 1px solid #FFEA00;
+  padding-bottom: 1em;
+  margin-top: 1em;
+}
+
+#img-hrm {
+  height: 100%;
+  width: 100%;
+}
+
+#persentase {
+  style: none;
+  font-size: 20px;
+}
+
+#data {
+  /*
+  height: 580px;
+  min-height: 550px;
+  */
+}
+
+#pengumuman {
+  min-height: 300px;
+  background-color: #a00;
+  color: #fff;
+}
+
+#channel  {
+  height: 400px;
+}
+
+#panel-channel-body {
+  height: 323px;
+}
+
+/** footer **/
+#footer {
+  text-align: center;
+}
+#footer p, #footer ul {
+  margin: 0.8em;
+}
+#footer ul {
+  margin-top: 1.2em;
+}
+#footer li {
+  display: inline;
+  list-style: none;
+}
+
+/* needed for bootstrap to work */
+html {
+	background: transparent;
+}

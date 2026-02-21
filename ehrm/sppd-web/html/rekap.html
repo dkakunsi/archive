@@ -1,0 +1,69 @@
+<div class="row placeholders">
+	<div class="col-xs-6 col-sm-3 placeholder">
+    	<button id="btn-rekap-spt" class="btn btn-transclute" data-toggle="modal" data-target="#modal-rekap-spt">
+        	<img src="images/print.png" width="50" />
+			<p>
+				<span class="text-muted">Rekap SPT</span>
+			</p>
+		</button>
+	</div>
+	<div class="col-xs-6 col-sm-3 placeholder">
+    	<button id="btn-rekap-sppd" class="btn btn-transclute" data-toggle="modal" data-target="#modal-rekap-sppd">
+        	<img src="images/print.png" width="50" />
+			<p>
+				<span class="text-muted">Rekap SPPD</span>
+			</p>
+		</button>
+	</div>
+</div>
+
+<div class="modal fade" id="modal-rekap-spt" role="dialog">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+		    	<h4 class="modal-title">Rekap SPT</h4>
+			</div>
+		    <div class="modal-body">
+		    	<form id="form-rekap-spt" role="form">
+		            <div class="form-group">
+		              <label for="form-rekap-spt-tanggal-awal" class="control-label">Tanggal Awal</label>
+					  <input type='date' class="form-control" placeholder="Pilih Tanggal Awal" id="form-rekap-spt-tanggal-awal"/>
+		            </div>
+		            <div class="form-group">
+		              <label for="form-rekap-spt-tanggal-akhir" class="control-label">Tanggal Akhir</label>
+					  <input type='date' class="form-control" placeholder="Pilih Tanggal Akhir" id="form-rekap-spt-tanggal-akhir"/>
+		            </div>
+		    	</form>
+		    </div><!-- modal-body -->
+			<div class="modal-footer">
+		        <button class="btn btn-default" data-dismiss="modal">Tutup</button>
+		    	<button class="btn btn-primary" id="btn-rekap-spt-cetak">Cetak</button>
+			</div>
+		</div><!-- /.modal-content -->
+	</div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+<div class="modal fade" id="modal-rekap-sppd" role="dialog">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+		    	<h4 class="modal-title">Rekap SPPD</h4>
+			</div>
+		    <div class="modal-body">
+		    	<form id="form-rekap-sppd" role="form">
+		            <div class="form-group">
+		              <label for="form-rekap-sppd-tanggal-awal" class="control-label">Tanggal Awal</label>
+					  <input type='date' class="form-control" placeholder="Pilih Tanggal Awal" id="form-rekap-sppd-tanggal-awal"/>
+		            </div>
+		            <div class="form-group">
+		              <label for="form-rekap-sppd-tanggal-akhir" class="control-label">Tanggal Akhir</label>
+					  <input type='date' class="form-control" placeholder="Pilih Tanggal Akhir" id="form-rekap-sppd-tanggal-akhir"/>
+		            </div>
+		    	</form>
+		    </div><!-- modal-body -->
+			<div class="modal-footer">
+		        <button class="btn btn-default" data-dismiss="modal">Tutup</button>
+		    	<button class="btn btn-primary" id="btn-rekap-sppd-cetak">Cetak</button>
+			</div>
+		</div><!-- /.modal-content -->
+	</div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
