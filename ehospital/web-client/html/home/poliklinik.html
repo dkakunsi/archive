@@ -1,0 +1,174 @@
+<div class="row">
+	<!-- textbox kode pasien -->
+	<div class="input-group">
+		<input type="text" class="form-control" id="txt-kode-pasien" placeholder="Kode Pasien">
+		<span class="input-group-btn">
+			<button class="btn btn-primary" type="button" id="btn-get-pasien">
+				<span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+				Cari
+			</button>
+		</span>
+	</div><!-- /input-group -->
+</div>
+<div class="row">&nbsp;</div>
+<div class="row">
+	<div class="panel panel-primary">
+		<div class="panel-heading"><h4>DATA PASIEN</h4></div>
+		<ul class="list-group">
+			<li class="list-group-item" id="pasien-medrek">#pasien-medrek</li>
+			<li class="list-group-item" id="pasien-nama">#pasien-nama</li>
+			<li class="list-group-item" id="pasien-umur">#pasien-umur</li>
+			<li class="list-group-item" id="pasien-kelamin">#pasien-kelamin</li>
+			<li class="list-group-item" id="pasien-agama">#pasien-agama</li>
+			<li class="list-group-item" id="pasien-kelas">#pasien-kelas</li>
+			<li class="list-group-item" id="pasien-tanggungan">#pasien-tanggungan</li>
+		</ul>
+	</div>
+</div>
+<div class="row">&nbsp;</div>
+<div class="row">
+	<div class="panel panel-primary">
+		<div class="panel-heading clearfix">
+			<h4 class="panel-title pull-left" style="padding-top: 7.5px;">DAFTAR TAGIHAN</h4>
+			<button type="button" class="btn btn-success pull-right" id="btn-tambah-tagihan" data-toggle="modal" data-target="#modal-form-tagihan-tambah">
+				<span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+				Tambah
+			</button>
+		</div>
+		<table class="table table-hover">
+			<thead>
+				<tr>
+					<td>TANGGAL</td>
+					<td>UNIT</td>
+					<td>TINDAKAN</td>
+					<td>JUMLAH</td>
+					<td>BIAYA</td>
+					<td>&nbsp;</td>
+				</tr>
+			</thead>
+			<tbody id="table-tagihan">
+				<tr>
+					<td>1</td>
+					<td>1</td>
+					<td>1</td>
+					<td>1</td>
+					<td>1</td>
+					<td>
+						<button type="button" class="btn btn-danger btn-xs pull-right">
+							<span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
+							Hapus
+						</button>
+					</td>
+				</tr>
+				<tr>
+					<td>1</td>
+					<td>1</td>
+					<td>1</td>
+					<td>1</td>
+					<td>1</td>
+					<td>
+						<button type="button" class="btn btn-danger btn-xs pull-right">
+							<span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
+							Hapus
+						</button>
+					</td>
+				</tr>
+				<tr>
+					<td>1</td>
+					<td>1</td>
+					<td>1</td>
+					<td>1</td>
+					<td>1</td>
+					<td>
+						<button type="button" class="btn btn-danger btn-xs pull-right">
+							<span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
+							Hapus
+						</button>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>
+
+<!-- Modal untuk tambah tagihan -->
+<div class="modal fade" id="modal-form-tagihan-tambah" role="dialog">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Tutup</span></button>
+				<h4 class="modal-title">TAMBAH TAGIHAN</h4>
+			</div>
+			<div class="modal-body">
+				<!-- textbox kode tindakan -->
+				<div class="input-group">
+					<input type="text" class="form-control" id="txt-kode-tindakan" placeholder="Kode atau Nama Tindakan">
+					<span class="input-group-btn">
+						<button class="btn btn-primary" type="button" id="btn-get-tindakan">Cari!</button>
+					</span>
+				</div><!-- /input-group -->
+				<br />
+				<table class="table table-hover">
+					<thead>
+						<tr>
+							<td>NAMA</td>
+							<td>KELAS</td>
+							<td>&nbsp;</td>
+						</tr>
+					</thead>
+					<tbody id="table-tindakan">
+						<tr>
+							<td>1</td>
+							<td>1</td>
+							<td>
+								<button type="button" class="btn btn-success btn-xs pull-right">
+									<span class="glyphicon glyphicon-check" aria-hidden="true"></span>
+									Pilih
+								</button>
+							</td>
+						</tr>
+						<tr>
+							<td>1</td>
+							<td>1</td>
+							<td>
+								<button type="button" class="btn btn-success btn-xs pull-right">
+									<span class="glyphicon glyphicon-check" aria-hidden="true"></span>
+									Pilih
+								</button>
+							</td>
+						</tr>
+						<tr>
+							<td>1</td>
+							<td>1</td>
+							<td>
+								<button type="button" class="btn btn-success btn-xs pull-right">
+									<span class="glyphicon glyphicon-check" aria-hidden="true"></span>
+									Pilih
+								</button>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+
+				<ul class="list-group">
+					<li class="list-group-item" id="tindakan-nama">#tindakan-nama</li>
+					<li class="list-group-item" id="tindakan-kelas">#tindakan-kelas</li>
+					<li class="list-group-item" id="tindakan-tanggungan">#tindakan-tanggungan</li>
+					<li class="list-group-item">
+						<input type="text" class="form-control" id="txt-tagihan-jumlah" placeholder="Jumlah Tindakan">
+					</li>
+					<li class="list-group-item">
+						<input type="text" class="form-control" id="txt-tagihan-biaya-tambahan" placeholder="Biaya Tambahan">
+					</li>
+					<li class="list-group-item">
+						<input type="date" class="form-control" id="txt-tagihan-tanggal" placeholder="Tanggal">
+					</li>
+				</ul>
+			</div><!-- modal-body -->
+			<div class="modal-footer">
+				<button class="btn btn-primary" id="btn-tagihan-simpan" data-dismiss="modal">Simpan</button>
+				<button class="btn btn-default" data-dismiss="modal">Tutup</button>
+			</div>
+		</div><!-- /.modal-content -->
+	</div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
